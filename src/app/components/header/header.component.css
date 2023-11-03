@@ -1,0 +1,35 @@
+header {
+    border-bottom: 1px solid black;
+}
+
+nav {
+    /* border:  1px solid red; */
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+.step-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.step-logo img {
+    padding: 20px;
+    width: 400px;
+}
+
+.links {
+    /* border:  1px solid red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.links li {
+    margin: 1em;
+}
+
+.link {
+    /* border:  1px solid red; */
+    font-size: 20px;
+}

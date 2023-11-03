@@ -1,0 +1,115 @@
+<h1 class="pt-5">CADASTRO ESCOLA</h1>
+
+<form (ngSubmit)="submit()" [formGroup]="registerForm" #formDir="ngForm">
+    
+    <h3>Identificação</h3>
+    <div class="form-group">
+        <label for="nomeescola">Escola:</label>
+        <input type="text" placeholder="Nome da escola" formControlName="nomeescola" required>
+        <div *ngIf="nomeescola.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="nomeescola.errors?.['required']">O nome da escola é obrigatório</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="responsavel">Responsável:</label>
+        <input type="text" placeholder="Responsável pela escola" formControlName="responsavel" required>
+        <div *ngIf="responsavel.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="responsavel.errors?.['required']">Obrigatório informar um responsável</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Email do responsável" formControlName="email" required>
+        <div *ngIf="email.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="email.errors?.['required']">O email é obrigatório</p>
+        </div>
+    </div>
+        
+    <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="number" placeholder="Telefone de contato" formControlName="telefone" required>
+        <div *ngIf="telefone.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="telefone.errors?.['required']">O telefone é obrigatório</p>
+        </div>
+    </div>
+
+    
+    <h3>Endereço</h3>
+    <div class="form-group">
+        <label for="rua">Rua:</label>
+        <input type="text" placeholder="Rua da escola" formControlName="rua" required>
+        <div *ngIf="rua.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="rua.errors?.['required']">A rua é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="numero">Número:</label>
+        <input type="number" placeholder="Número da escola" formControlName="numero" required>
+        <div *ngIf="numero.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="numero.errors?.['required']">O número é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="bairro">Bairro:</label>
+        <input type="text" placeholder="Bairro da escola" formControlName="bairro" required>
+        <div *ngIf="bairro.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="bairro.errors?.['required']">O bairro é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="cidade">Cidade:</label>
+        <input type="text" placeholder="Cidade da escola" formControlName="cidade" required>
+        <div *ngIf="cidade.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="cidade.errors?.['required']">A cidade é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="estado">Estado:</label>
+        <select formControlName="estado" required>
+            <option value="Acre (AC)">Acre (AC)</option>
+            <option value="Alagoas (AL)">Alagoas (AL)</option>
+            <option value="Amapá (AP)">Amapá (AP)</option>
+            <option value="Amazonas (AM)">Amazonas (AM)</option>
+            <option value="Bahia (BA)">Bahia (BA)</option>
+            <option value="Ceará (CE)">Ceará (CE)</option>
+            <option value="Distrito Federal (DF)">Distrito Federal (DF)</option>
+            <option value="Espírito Santo (ES)">Espírito Santo (ES)</option>
+            <option value="Goiás (GO)">Goiás (GO)</option>
+            <option value="Maranhão (MA)">Maranhão (MA)</option>
+            <option value="Mato Grosso (MT)">Mato Grosso (MT)</option>
+            <option value="Mato Grosso do Sul (MS)">Mato Grosso do Sul (MS)</option>
+            <option value="Minas Gerais (MG)">Minas Gerais (MG)</option>
+            <option value="Pará (PA)">Pará (PA)</option>
+            <option value="Paraíba (PB)">Paraíba (PB)</option>
+            <option value="Paraná (PR)">Paraná (PR)</option>
+            <option value="Pernambuco (PE)">Pernambuco (PE)</option>
+            <option value="Piauí (PI)">Piauí (PI)</option>
+            <option value="Rio de Janeiro (RJ)">Rio de Janeiro (RJ)</option>
+            <option value="Rio Grande do Norte (RN)">Rio Grande do Norte (RN)</option>
+            <option value="Rio Grande do Sul (RS)">Rio Grande do Sul (RS)</option>
+            <option value="Rondônia (RO)">Rondônia (RO)</option>
+            <option value="Roraima (RR)">Roraima (RR)</option>
+            <option value="Santa Catarina (SC)">Santa Catarina (SC)</option>
+            <option value="São Paulo (SP)">São Paulo (SP)</option>
+            <option value="Sergipe (SE)">Sergipe (SE)</option>
+            <option value="Tocantins (TO)">Tocantins (TO)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="cep">CEP:</label>
+        <input type="number" placeholder="Cep da escola" formControlName="cep" required>
+        <div *ngIf="cep.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="cep.errors?.['required']">O CEP é obrigatório</p>
+        </div>
+    </div>
+
+    <input type="submit" value="{{ btnText }}">
+
+</form>
