@@ -1,7 +1,8 @@
-import { formatDate } from '@angular/common';
 import { Component } from '@angular/core';
 import { User } from 'src/app/interfaces/User';
 import { UserService } from 'src/app/services/user.service';
+import { MessagesService } from 'src/app/services/messages.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-user',
@@ -11,7 +12,11 @@ import { UserService } from 'src/app/services/user.service';
 export class NewUserComponent {
   btnText = 'Criar';
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    private messagesService: MessagesService, 
+    private router:Router
+    ) {}
 
   ngOnInit(): void {}
 
@@ -29,8 +34,10 @@ export class NewUserComponent {
     await this.userService.createUser(formData).subscribe();
 
     // exibir msg
+    this.messagesService.add("Usuário criado com sucesso!")
 
     // redirect
+    this.router.navigate(['/'])
   }
 
 }

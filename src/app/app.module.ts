@@ -15,6 +15,8 @@ import { NewUserComponent } from './components/step/new-user/new-user.component'
 import { SchoolListComponent } from './components/step/school-list/school-list.component';
 import { RegisterComponent } from './components/school/register/register.component';
 import { NewRegisterComponent } from './components/school/new-register/new-register.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { NewRegisterComponent } from './components/school/new-register/new-regis
     NewUserComponent,
     SchoolListComponent,
     RegisterComponent,
-    NewRegisterComponent
+    NewRegisterComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { NewRegisterComponent } from './components/school/new-register/new-regis
     NgbModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

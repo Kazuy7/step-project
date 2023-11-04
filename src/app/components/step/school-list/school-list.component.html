@@ -1,1 +1,18 @@
-<p>school-list works!</p>
+<div class="list-container">
+
+    <h1>Lista de escolas</h1>
+
+    <div *ngIf="schools.length > 0; else noSchools">
+        <div class="schools-container">
+            <div class="school" *ngFor="let school of schools">
+                <button>
+                    <h2>{{ school.nomeescola }}</h2>
+                </button>
+            </div>
+        </div>
+    </div>
+    <ng-template #noSchools>
+        <h1>Não há escolas cadastradas!</h1>
+    </ng-template>
+
+</div>

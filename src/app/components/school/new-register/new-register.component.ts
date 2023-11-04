@@ -1,7 +1,8 @@
-import { formatDate } from '@angular/common';
 import { Component } from '@angular/core';
 import { Register } from 'src/app/interfaces/Register';
 import { RegisterService } from 'src/app/services/register.service';
+import { MessagesService } from 'src/app/services/messages.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-register',
@@ -11,7 +12,11 @@ import { RegisterService } from 'src/app/services/register.service';
 export class NewRegisterComponent {
   btnText = 'Cadastrar'
 
-  constructor(private registerService: RegisterService) {}
+  constructor(
+  private registerService: RegisterService,
+  private messagesService: MessagesService,
+  private router: Router
+  ) {}
 
   // Chamando o register do tipo Register e dizendo que é uma operação assíncrona por causa da interação com a API
   async createHandler(register: Register) {
@@ -30,6 +35,10 @@ export class NewRegisterComponent {
     formData.append("cep", register.cep)
     
     await this.registerService.createRegister(formData).subscribe();
+
+    this.messagesService.add("Escola cadastrada com sucesso!")
+
+    this.router.navigate(['/'])
   }
     
 }
