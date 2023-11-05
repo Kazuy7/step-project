@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { RegisterService } from 'src/app/services/register.service';
-import { Register } from 'src/app/interfaces/Register';
+// import { RegisterService } from 'src/app/services/register.service';
+// import { Register } from 'src/app/interfaces/Register';
+import { SchoolService } from 'src/app/services/school.service';
+import { School } from 'src/app/interfaces/School';
 import { Response } from 'src/app/interfaces/Response';
 import { environment } from 'src/environments/environment';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -12,15 +14,17 @@ import { subscribeOn } from 'rxjs';
   styleUrls: ['./school-list.component.css']
 })
 export class SchoolListComponent {
-
-  allSchools: Register[] = []
-  schools: Register[] = []
+  allSchools: School[] = []
+  schools: School[] = []
   baseApiUrl = environment.baseApiUrl
 
-  constructor(private registerService: RegisterService) {}
+  faSearch = faSearch
+  searchTerm: string = ''; 
+
+  constructor(private schoolService: SchoolService) {}
 
   ngOnInit(): void {
-    this.registerService.getRegisters().subscribe((items) => {
+    this.schoolService.getSchools().subscribe((items) => {
       const data = items.data
 
       // Tratando as datas
@@ -30,6 +34,15 @@ export class SchoolListComponent {
 
       this.allSchools = data;
       this.schools = data;
+    })
+  }
+
+  search(e: Event): void {
+    const target = e.target as HTMLInputElement
+    const value = target.value
+
+    this.schools = this.allSchools.filter((school) => {
+      return school.nomeescola.toLowerCase().includes(value);
     })
   }
   

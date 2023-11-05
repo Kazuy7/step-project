@@ -13,10 +13,10 @@ import { SchoolInfoComponent } from './components/school/school-info/school-info
 import { UserComponent } from './components/step/user/user.component';
 import { NewUserComponent } from './components/step/new-user/new-user.component';
 import { SchoolListComponent } from './components/step/school-list/school-list.component';
-import { RegisterComponent } from './components/school/register/register.component';
-import { NewRegisterComponent } from './components/school/new-register/new-register.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MessagesComponent } from './components/messages/messages.component';
+import { SchoolComponent } from './components/school/school/school.component';
+import { NewSchoolComponent } from './components/school/new-school/new-school.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +28,9 @@ import { MessagesComponent } from './components/messages/messages.component';
     UserComponent,
     NewUserComponent,
     SchoolListComponent,
-    RegisterComponent,
-    NewRegisterComponent,
-    MessagesComponent
+    MessagesComponent,
+    SchoolComponent,
+    NewSchoolComponent
   ],
   imports: [
     BrowserModule,

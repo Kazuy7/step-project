@@ -2,12 +2,18 @@
 
     <h1>Lista de escolas</h1>
 
+    <div class="search-container">
+        <form>
+            <fa-icon [icon]="faSearch"></fa-icon>
+            <input type="text" placeholder="Busque uma escola..." (input)="search($event)">
+        </form>
+    </div>
+
     <div *ngIf="schools.length > 0; else noSchools">
         <div class="schools-container">
             <div class="school" *ngFor="let school of schools">
-                <button>
-                    <h2>{{ school.nomeescola }}</h2>
-                </button>
+                <h2>{{ school.nomeescola }}</h2>
+                <a routerLink="schools/{{ school.id }}">INFO</a>
             </div>
         </div>
     </div>

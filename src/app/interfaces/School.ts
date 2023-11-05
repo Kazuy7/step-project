@@ -1,4 +1,4 @@
-export interface Register {
+export interface School {
     id?: number;
     nomeescola: string;
     responsavel: string;

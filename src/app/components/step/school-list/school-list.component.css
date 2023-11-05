@@ -18,3 +18,29 @@
     margin-bottom: 1em;
     text-align: center;
 }
+
+.search-container {
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.search-container form{
+    /* border: 1px solid red; */
+    width: 30%;
+    position: relative;
+}
+
+.search-container fa-icon {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.search-container input {
+    /* border: 1px solid red; */
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+}
+

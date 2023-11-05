@@ -1,21 +1,21 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Register } from 'src/app/interfaces/Register';
+import { School } from 'src/app/interfaces/School';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-school',
+  templateUrl: './school.component.html',
+  styleUrls: ['./school.component.css']
 })
-export class RegisterComponent {
-  @Output() onSubmit = new EventEmitter<Register>()
+export class SchoolComponent {
+  @Output() onSubmit = new EventEmitter<School>()
   @Input() btnText!: string
 
-  registerForm!: FormGroup;
+  schoolForm!: FormGroup;
 
-  // ngOnInit é uma funcionalidade do Angular, então aqui, estamos inicializando o registerForm e dizendo que ele é um FormGroup
+  // ngOnInit é uma funcionalidade do Angular, então aqui, estamos inicializando o schoolForm e dizendo que ele é um FormGroup
   ngOnInit(): void {
-    this.registerForm = new FormGroup({
+    this.schoolForm = new FormGroup({
       id: new FormControl(''),
       nomeescola: new FormControl('', [Validators.required]),
       responsavel: new FormControl('', [Validators.required]),
@@ -33,58 +33,57 @@ export class RegisterComponent {
   }
 
 
-  // pegando o atributo 'nomeescola' do registerForm para validar
+  // pegando o atributo 'nomeescola' do schoolForm para validar
   get nomeescola() {
-    return this.registerForm.get('nomeescola')!;
+    return this.schoolForm.get('nomeescola')!;
   }
 
   get responsavel() {
-    return this.registerForm.get('responsavel')!;
+    return this.schoolForm.get('responsavel')!;
   }
 
   get email() {
-    return this.registerForm.get('email')!;
+    return this.schoolForm.get('email')!;
   }
 
   get telefone() {
-    return this.registerForm.get('telefone')!;
+    return this.schoolForm.get('telefone')!;
   }
 
   get rua() {
-    return this.registerForm.get('rua')!;
+    return this.schoolForm.get('rua')!;
   }
 
   get numero() {
-    return this.registerForm.get('numero')!;
+    return this.schoolForm.get('numero')!;
   }
 
   get bairro() {
-    return this.registerForm.get('bairro')!;
+    return this.schoolForm.get('bairro')!;
   }
 
   get cidade() {
-    return this.registerForm.get('cidade')!;
+    return this.schoolForm.get('cidade')!;
   }
 
   get estado() {
-    return this.registerForm.get('estado')!;
+    return this.schoolForm.get('estado')!;
   }
 
   get cep() {
-    return this.registerForm.get('cep')!;
+    return this.schoolForm.get('cep')!;
   }
 
 
   submit() {
 
     // Se o formulário não estiver 100% corretor as informações não são enviadas
-    if(this.registerForm.invalid) {
+    if(this.schoolForm.invalid) {
       return;
     }
     console.log('Enviou o formulário!');
 
-    // Virificando os dados do formulário do componente pai -> new-register
-    this.onSubmit.emit(this.registerForm.value);
+    // Virificando os dados do formulário do componente pai -> new-school
+    this.onSubmit.emit(this.schoolForm.value);
   }
-
 }
