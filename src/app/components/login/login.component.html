@@ -1,24 +1,19 @@
-<form>
+<div class="login-container">
 
-    <div class="login-container">
+    <!-- <div class="col-6 border w-100">
+        <img src="../../../assets/step_sete.png" class="w-100">
+    </div> -->
 
-        <div class="col-6 border w-100">
-            <img src="../../../assets/step_sete.png" class="w-100">
+    <div class="col-6 border w-100">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" [(ngModel)]="credentials.email">
         </div>
-
-        <div class="col-6 border w-100">
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Senha</label>
-                <input type="password" class="form-control">
-                <div id="emailHelp" class="form-text">Não compartilhe sua senha com ninguém.</div>
-            </div>
-            <button type="submit" class="btn btn-primary">Entrar</button>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" class="form-control" [(ngModel)]="credentials.senha">
         </div>
-        
+        <button type="submit" class="btn btn-primary" (click)="login()">Entrar</button>
     </div>
 
-</form>
+</div>

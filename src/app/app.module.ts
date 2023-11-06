@@ -17,6 +17,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MessagesComponent } from './components/messages/messages.component';
 import { SchoolComponent } from './components/school/school/school.component';
 import { NewSchoolComponent } from './components/school/new-school/new-school.component';
+import { HomeStepComponent } from './components/home-step/home-step.component';
+import { HomeSchoolComponent } from './components/home-school/home-school.component';
+import { AuthInterceptor } from './security/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { NewSchoolComponent } from './components/school/new-school/new-school.co
     SchoolListComponent,
     MessagesComponent,
     SchoolComponent,
-    NewSchoolComponent
+    NewSchoolComponent,
+    HomeStepComponent,
+    HomeSchoolComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,9 +44,9 @@ import { NewSchoolComponent } from './components/school/new-school/new-school.co
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
-  providers: [],
+  providers: [AuthInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
