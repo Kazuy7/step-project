@@ -12,8 +12,8 @@
     <div *ngIf="schools.length > 0; else noSchools">
         <div class="schools-container">
             <div class="school" *ngFor="let school of schools">
-                <h2>{{ school.nomeescola }}</h2>
-                <a routerLink="schools/{{ school.id }}">INFO</a>
+                <h1><a routerLink="/school/{{ school.id }}">{{ school.nomeescola }}</a></h1>
+                <p>{{ school.created_at }}</p>
             </div>
         </div>
     </div>

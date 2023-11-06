@@ -10,7 +10,7 @@ import { Response } from '../interfaces/Response';
 })
 export class SchoolService {
   private baseApiUrl = environment.baseApiUrl
-  private apiUrl = `${this.baseApiUrl}api/schools`
+  private apiUrl = `${this.baseApiUrl}api/school`
 
   constructor(private http: HttpClient) { }
 

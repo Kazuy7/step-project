@@ -1,6 +1,102 @@
-<div class="school" *ngIf="school">
-    <h1>{{ school.nomeescola }}</h1>
-    <h1>{{ school.responsavel }}</h1>
-    <h1>{{ school.email }}</h1>
-    <h1>{{ school.telefone }}</h1>
-</div>
+<div class="school-container row" *ngIf="school">
+        
+        <div class="col-6 iden">
+            <!-- <h1>Identificação</h1> -->
+            <h1>Escola <span>{{ school.nomeescola }}</span></h1>
+            <h3><b>Responsável:</b> {{ school.responsavel }}</h3>
+            <h3><b>Email:</b> {{ school.email }}</h3>
+            <h3><b>Telefone:</b> {{ school.telefone }}</h3>
+        </div>
+        
+        <div class="col-6 end">
+            <h1>Endereço</h1>
+            <ul>
+                <li><b>Rua:</b> {{ school.rua }}</li>
+                <li><b>Número:</b> {{ school.numero }}</li>
+                <li><b>Bairro:</b> {{ school.bairro }}</li>
+                <li><b>Cidade:</b> {{ school.cidade }}</li>
+                <li><b>Estado:</b> {{ school.estado }}</li>
+                <li><b>CEP:</b> {{ school.cep }}</li>
+            </ul>
+        </div>
+
+    </div>
+    <hr>
+    <div class="row text-center">
+
+        <h1>Turmas</h1>
+
+        <div class="col-4 pb-5">
+            <h5>1º A</h5>
+            <ul>
+                <li>Dia da aula: Terça-feira</li>
+                <li>Número de alunos: <span>XX</span></li>
+            </ul>
+        </div>
+
+        <div class="col-4 pb-5">
+            <h5>1º B</h5>
+            <ul>
+                <li>Dia da aula: Sexta-feira</li>
+                <li>Número de alunos: <span>XX</span></li>
+            </ul>
+        </div>
+
+        <div class="col-4 pb-5">
+            <h5>2º A</h5>
+            <ul>
+                <li>Dia da aula: Quinta-feira</li>
+                <li>Número de alunos: <span>XX</span></li>
+            </ul>
+        </div>
+
+        <div class="col-4 pb-5">
+            <h5>2º B</h5>
+            <ul>
+                <li>Dia da aula: Terça-feira</li>
+                <li>Número de alunos: <span>XX</span></li>
+            </ul>
+        </div>
+
+        <div class="col-4 pb-5">
+            <h5>Fundamental 1 A</h5>
+            <ul>
+                <li>Dia da aula: Terça-feira</li>
+                <li>Número de alunos: <span>XX</span></li>
+            </ul>
+        </div>
+
+        <div class="col-4 pb-5">
+            <h5>Fundamental 1 B</h5>
+            <ul>
+                <li>Dia da aula: Terça-feira</li>
+                <li>Número de alunos: <span>XX</span></li>
+            </ul>
+        </div>
+
+        <div class="col-4 pb-5">
+            <h5>Fundamental 2 A</h5>
+            <ul>
+                <li>Dia da aula: Terça-feira</li>
+                <li>Número de alunos: <span>XX</span></li>
+            </ul>
+        </div>
+
+        <div class="col-4 pb-5">
+            <h5>Fundamental 2 B</h5>
+            <ul>
+                <li>Dia da aula: Terça-feira</li>
+                <li>Número de alunos: <span>XX</span></li>
+            </ul>
+        </div>
+
+        <div class="col-4 pb-5">
+            <h5>Fundamental 2 C</h5>
+            <ul>
+                <li>Dia da aula: Terça-feira</li>
+                <li>Número de alunos: <span>XX</span></li>
+            </ul>
+        </div>
+
+        
+    </div>

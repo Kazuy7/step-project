@@ -1,0 +1,23 @@
+span {
+    color: red;
+}
+
+.school-container {
+    /* border: 2px solid black; */
+    /* border-radius: 20px; */
+    display: flex;
+    align-items: center;
+    margin: 50px 0 50px 0;
+    /* padding: 10px; */
+}
+
+.iden {
+    /* border: 1px solid red; */
+    text-align: right;
+}
+
+.end {
+    /* border: 1px solid red; */
+    text-align: start;
+    border-left: 2px solid black;
+}

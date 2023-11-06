@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-// import { RegisterService } from 'src/app/services/register.service';
-// import { Register } from 'src/app/interfaces/Register';
 import { SchoolService } from 'src/app/services/school.service';
 import { School } from 'src/app/interfaces/School';
 import { Response } from 'src/app/interfaces/Response';

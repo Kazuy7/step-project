@@ -20,8 +20,6 @@ export class SchoolInfoComponent {
     // Carregando dado pelo id
     this.schoolService.getSchool(id)
     .subscribe((item) => (this.school = item.data));
-
-    console.log('VALOR DO ID AQUI:', id);
   }
 
 }
