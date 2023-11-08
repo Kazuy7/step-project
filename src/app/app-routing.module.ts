@@ -9,8 +9,9 @@ import { HomeStepComponent } from './components/home-step/home-step.component';
 
 const routes: Routes = [
       { path: '', component: HomeStepComponent },
+      { path: 'login', component: LoginComponent },
       { path: 'user/new', component: NewUserComponent },
-      { path: 'school/new-school', component: NewSchoolComponent },
+      { path: 'school/new', component: NewSchoolComponent },
       { path: 'school/list', component: SchoolListComponent},
       { path: 'school/:id', component: SchoolInfoComponent}
     ];

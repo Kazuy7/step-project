@@ -1,0 +1,23 @@
+.street {
+    width: 80%;
+}
+
+.street-number {
+    width: 20%;
+}
+
+.neighborhood {
+    width: 60%;
+}
+
+.city {
+    width: 40%;
+}
+
+.state {
+    width: 60%;
+}
+
+.zip-code {
+    width: 40%;
+}

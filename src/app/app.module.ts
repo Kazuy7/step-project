@@ -19,7 +19,7 @@ import { SchoolComponent } from './components/school/school/school.component';
 import { NewSchoolComponent } from './components/school/new-school/new-school.component';
 import { HomeStepComponent } from './components/home-step/home-step.component';
 import { HomeSchoolComponent } from './components/home-school/home-school.component';
-import { AuthInterceptor } from './security/auth.interceptor';
+// import { AuthInterceptor } from './security/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { AuthInterceptor } from './security/auth.interceptor';
     ReactiveFormsModule,
     FontAwesomeModule,
   ],
-  providers: [AuthInterceptor],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

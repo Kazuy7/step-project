@@ -1,3 +1,93 @@
-.container {
-    min-height: 60vh;
+@media(min-width: 768px) {
+    .nav-container {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        /* margin-top: 20px; */
+    }
+
+    .btn {
+        /* border: 1px solid yellow; */
+        color: black;
+        width: 80%;
+        text-align: end;
+    }
+
+    .image-container {
+        /* border: 1px solid yellow; */
+        width: 60%;
+        text-align: center;
+    }
+    
+    .image-container img {
+        /* border: 1px solid yellow; */
+        width: 400px;
+        padding: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .nav-container {
+        /* border:  1px solid red; */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* margin-top: 20px; */
+    }
+
+    .dropend {
+        /* border: 1px solid green; */
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        /* border: 1px solid yellow; */
+        color: black;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+.btn-user {
+    background-color: #1fa5bc;
+}
+
+/* .btn-school {
+    background-color: #e30613;
+} */
+
+.btn-component {
+    background-color: #f8b037;
+}
+
+.btn-kit {
+    background-color: #2daae0;
+}
+
+.btn-activity {
+    background-color: #e94e1b;
+}
+
+
+.dropend img {
+    /* border: 1px solid green; */
+    width: 32px;
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    background-color: black;
+}
+
+.link {
+    /* border: 1px solid red; */
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.link:hover {
+    color: grey;
 }

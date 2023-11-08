@@ -1,6 +1,6 @@
 <h1 class="pt-5">CADASTRO</h1>
 
-<form (ngSubmit)="submit()" [formGroup]="userForm" #formDir="ngForm">
+<form (ngSubmit)="submit()" [formGroup]="userForm" #formDir="ngForm" class="pb-5">
 
     <div class="form-group">
         <label for="email">Email:</label>
@@ -35,6 +35,8 @@
         </select>
     </div>
 
-    <input type="submit" value="{{ btnText }}">
+    <div class="btn-register">
+        <input type="submit" value="{{ btnText }}">
+    </div>
 
 </form>

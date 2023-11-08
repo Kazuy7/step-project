@@ -1,7 +1,7 @@
 footer {
     display: flex;
     flex-direction: column;
-    justify-content: bottom;
-    padding-top: 13%;
-    height: 200px;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    height: 100px;
 }
