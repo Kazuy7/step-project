@@ -12,7 +12,7 @@ export class UserService {
   private baseApiUrl = environment.baseApiUrl;
 
   // é necessario criar a apiUrl porque teremos urls diferentes em services diferentes
-  private apiUrl = `${this.baseApiUrl}api/users`;
+  private apiUrl = `${this.baseApiUrl}api/user`;
 
   // para fazer a requisição
   constructor(private http: HttpClient) {} 
