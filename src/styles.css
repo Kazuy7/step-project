@@ -10,11 +10,11 @@
 a {
     text-decoration: none;
     transition: 0.4s;
-    color: rgb(28, 28, 224);
+    color: black;
 }
 
 a:hover {
-    color: grey;
+    color: #e94e1b;
 }
 
 li {
@@ -27,7 +27,6 @@ ul {
 }
 
 /* FORM  */
-
 @media(min-height: 768px) {
     form {
         width: 100%;
@@ -105,5 +104,4 @@ input[type="submit"]:hover {
     border-left: 3px solid red;
     padding-left: 5px;
 }
-
 /* FORM  */

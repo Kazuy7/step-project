@@ -1,11 +1,11 @@
-<div class="list-container">
+<h1 class="pt-5">Lista de escolas</h1>
 
-    <h1>Lista de escolas</h1>
+<div class="list-container">
 
     <div class="search-container">
         <form>
             <fa-icon [icon]="faSearch"></fa-icon>
-            <input type="text" placeholder="Busque uma escola..." (input)="search($event)">
+            <input type="text" placeholder="Pesquisar" (input)="search($event)">
         </form>
     </div>
 
@@ -13,10 +13,11 @@
         <div class="schools-container">
             <div class="school" *ngFor="let school of schools">
                 <h1><a routerLink="/school/{{ school.id }}">{{ school.nomeescola }}</a></h1>
-                <p>{{ school.created_at }}</p>
+                <!-- <p>Cadastrado em: <b>{{ school.created_at }}</b></p> -->
             </div>
         </div>
     </div>
+
     <ng-template #noSchools>
         <h1>Não há escolas cadastradas!</h1>
     </ng-template>
