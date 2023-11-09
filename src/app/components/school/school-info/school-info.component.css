@@ -1,14 +1,19 @@
 span {
-    color: red;
+    color: #1fa5bc;
+}
+
+h5 {
+    margin: 0;
 }
 
 .school-container {
-    /* border: 2px solid black; */
-    /* border-radius: 20px; */
+    border: 1px solid rgba(128, 128, 128, 0.300);
+    border-radius: 20px;
+    background-color: rgb(235, 235, 235);
     display: flex;
     align-items: center;
     margin: 50px 0 50px 0;
-    /* padding: 10px; */
+    padding: 10px;
 }
 
 .iden {
@@ -20,4 +25,61 @@ span {
     /* border: 1px solid red; */
     text-align: start;
     border-left: 2px solid black;
+}
+
+.classes {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.inf {
+    /* border: 1px solid red; */
+    height: 60px;
+    width: 23%;
+    background-color: #e94e1b;
+    border-radius: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fund-1 {
+    /* border: 1px solid red; */
+    height: 60px;
+    width: 23%;
+    background-color: #f8b037;
+    border-radius: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fund-2 {
+    /* border: 1px solid red; */
+    height: 60px;
+    width: 23%;
+    background-color: #2daae0;
+    border-radius: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.med {
+    /* border: 1px solid red; */
+    height: 60px;
+    width: 23%;
+    background-color: #1fa5bc;
+    border-radius: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

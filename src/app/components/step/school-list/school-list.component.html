@@ -9,13 +9,13 @@
         </form>
     </div>
 
-    <div *ngIf="schools.length > 0; else noSchools">
-        <div class="schools-container">
+    <div *ngIf="schools.length > 0; else noSchools" class="schools-container">
+        <!-- <div class="schools-container"> -->
             <div class="school" *ngFor="let school of schools">
-                <h1><a routerLink="/school/{{ school.id }}">{{ school.nomeescola }}</a></h1>
+                <h1 class="m-0"><a routerLink="/school/{{ school.id }}">{{ school.nomeescola }}</a></h1>
                 <!-- <p>Cadastrado em: <b>{{ school.created_at }}</b></p> -->
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 
     <ng-template #noSchools>
