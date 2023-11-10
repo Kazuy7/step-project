@@ -12,24 +12,32 @@
     </div>
     
     <div class="form-group">
+        <label for="razaosocial">Razão Social:</label>
+        <input type="text" placeholder="Razão social" formControlName="razaosocial" required>
+        <div *ngIf="razaosocial.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="razaosocial.errors?.['required']">A razão social é obrigatória</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" placeholder="Cnpj" formControlName="cnpj" required>
+        <div *ngIf="cnpj.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="cnpj.errors?.['required']">O CNPJ é obrigatório</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
         <label for="responsavel">Responsável:</label>
         <input type="text" placeholder="Responsável pela escola" formControlName="responsavel" required>
         <div *ngIf="responsavel.invalid && formDir.submitted" class="validation-error">
             <p *ngIf="responsavel.errors?.['required']">Obrigatório informar um responsável</p>
         </div>
     </div>
-
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" placeholder="Email do responsável" formControlName="email" required>
-        <div *ngIf="email.invalid && formDir.submitted" class="validation-error">
-            <p *ngIf="email.errors?.['required']">O email é obrigatório</p>
-        </div>
-    </div>
         
     <div class="form-group">
         <label for="telefone">Telefone:</label>
-        <input type="number" placeholder="Telefone de contato" formControlName="telefone" required>
+        <input type="text" placeholder="Telefone de contato" formControlName="telefone" required>
         <div *ngIf="telefone.invalid && formDir.submitted" class="validation-error">
             <p *ngIf="telefone.errors?.['required']">O telefone é obrigatório</p>
         </div>
@@ -49,7 +57,7 @@
     
         <div class="form-group street-number">
             <label for="numero">Número:</label>
-            <input type="number" placeholder="Número da escola" formControlName="numero" required>
+            <input type="text" placeholder="Número da escola" formControlName="numero" required>
             <div *ngIf="numero.invalid && formDir.submitted" class="validation-error">
                 <p *ngIf="numero.errors?.['required']">O número é obrigatório</p>
             </div>
@@ -113,7 +121,7 @@
     
         <div class="form-group zip-code">
             <label for="cep">CEP:</label>
-            <input type="number" placeholder="Cep da escola" formControlName="cep" required>
+            <input type="text" placeholder="Cep da escola" formControlName="cep" required>
             <div *ngIf="cep.invalid && formDir.submitted" class="validation-error">
                 <p *ngIf="cep.errors?.['required']">O CEP é obrigatório</p>
             </div>

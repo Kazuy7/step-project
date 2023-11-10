@@ -24,8 +24,9 @@ export class NewSchoolComponent {
     const formData = new FormData()
 
     formData.append("nomeescola", school.nomeescola)
+    formData.append("razaosocial", school.razaosocial)
+    formData.append("cnpj", school.cnpj)
     formData.append("responsavel", school.responsavel)
-    formData.append("email", school.email)
     formData.append("telefone", school.telefone)
     formData.append("rua", school.rua)
     formData.append("numero", school.numero)

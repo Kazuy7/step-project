@@ -18,8 +18,9 @@ export class SchoolComponent {
     this.schoolForm = new FormGroup({
       id: new FormControl(''),
       nomeescola: new FormControl('', [Validators.required]),
+      razaosocial: new FormControl('', [Validators.required]),
+      cnpj: new FormControl('', [Validators.required]),
       responsavel: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required]),
       telefone: new FormControl('', [Validators.required]),
       rua: new FormControl('', [Validators.required]),
       numero: new FormControl('', [Validators.required]),
@@ -38,12 +39,16 @@ export class SchoolComponent {
     return this.schoolForm.get('nomeescola')!;
   }
 
-  get responsavel() {
-    return this.schoolForm.get('responsavel')!;
+  get razaosocial() {
+    return this.schoolForm.get('razaosocial')!;
   }
 
-  get email() {
-    return this.schoolForm.get('email')!;
+  get cnpj() {
+    return this.schoolForm.get('cnpj')!;
+  }
+
+  get responsavel() {
+    return this.schoolForm.get('responsavel')!;
   }
 
   get telefone() {

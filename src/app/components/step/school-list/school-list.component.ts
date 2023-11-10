@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { SchoolService } from 'src/app/services/school.service';
 import { School } from 'src/app/interfaces/School';
-import { Response } from 'src/app/interfaces/Response';
 import { environment } from 'src/environments/environment';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { subscribeOn } from 'rxjs';
 
 @Component({
   selector: 'app-school-list',

@@ -8,12 +8,14 @@ export interface User {
     updated_at?: string;
     schools?: [{ id?: number;
         nomeescola: string;
+        razaosocial: string;
+        cnpj: string;
         responsavel: string;
-        email: string;
         telefone: string;
         rua: string;
         numero: string;
         bairro: string;
         cidade: string;
-        estado: string; }];
+        estado: string;
+        cep: string; }];
 }

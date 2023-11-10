@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { SchoolService } from 'src/app/services/school.service';
 import { School } from 'src/app/interfaces/School';
 
