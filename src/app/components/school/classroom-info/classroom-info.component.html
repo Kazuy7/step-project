@@ -1,0 +1,9 @@
+<div class="classroom-container row" *ngIf="classroom">
+
+    <h1>Professor: <span>{{ classroom.professor }}</span></h1>
+    <div class="col-6 iden">
+        <h3><b>Número de alunos:</b> {{ classroom.numeroalunos }}</h3>
+        <h3><b>Turma:</b> {{ classroom.ano }}</h3>
+        <h3><b>Período:</b> {{ classroom.periodo }}</h3>
+        <h3><b>Dia da semana:</b> {{ classroom.dia }}</h3>
+    </div>

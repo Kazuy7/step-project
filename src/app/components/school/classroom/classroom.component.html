@@ -1,0 +1,59 @@
+<h1 class="pt-5">CADASTRO DE TURMA</h1>
+
+<form (ngSubmit)="submit()" [formGroup]="classroomForm" #formDir="ngForm" class="pb-5">
+    
+    <h2>Identificação</h2>
+    <div class="form-group">
+        <label for="professor">Professor:</label>
+        <input type="text" placeholder="Nome do professor" formControlName="professor" required>
+        <div *ngIf="professor.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="professor.errors?.['required']">O nome do(a) professor(a) é obrigatório</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="numeroalunos">Número de alunos:</label>
+        <input type="text" placeholder="Número de alunos" formControlName="numeroalunos" required>
+        <div *ngIf="numeroalunos.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="numeroalunos.errors?.['required']">O número de alunos é obrigatório</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="ano">Ano:</label>
+        <input type="text" placeholder="Ano" formControlName="ano" required>
+        <div *ngIf="ano.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="ano.errors?.['required']">O ano é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="periodo">Período da aula:</label>
+        <select formControlName="periodo" required>
+            <option selected>Manhã</option>
+            <option>Tarde</option>
+        </select>
+        <div *ngIf="periodo.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="periodo.errors?.['required']">O período é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="dia">Dia da aula:</label>
+        <select formControlName="dia" required>
+            <option selected>Segunda-feira</option>
+            <option>Terça-feira</option>
+            <option>Quarta-feira</option>
+            <option>Quinta-feira</option>
+            <option>Sexta-feira</option>
+        </select>
+        <div *ngIf="dia.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="dia.errors?.['required']">O dia é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="btn-register">
+        <input type="submit" value="{{ btnText }}">
+    </div>
+
+</form>

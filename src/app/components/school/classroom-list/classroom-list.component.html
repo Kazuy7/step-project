@@ -1,0 +1,15 @@
+<h1 class="pt-5">Lista de turmas</h1>
+
+<div class="list-container">
+
+    <div *ngIf="classrooms.length > 0; else noSchools" class="classrooms-container">
+        <div class="classroom" *ngFor="let classroom of classrooms">
+            <h1 class="m-0"><a routerLink="/classroom/{{ classroom.id }}">{{ classroom.ano }}</a></h1>
+        </div>
+    </div>
+
+    <ng-template #noSchools>
+        <h1>Não há turmas cadastradas!</h1>
+    </ng-template>
+
+</div>

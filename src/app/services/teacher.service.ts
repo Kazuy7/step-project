@@ -6,18 +6,18 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class TeacherService {
   // acessando API como objeto porque está sendo exportada como objeto
   private baseApiUrl = environment.baseApiUrl;
 
   // é necessario criar a apiUrl porque teremos urls diferentes em services diferentes
-  private apiUrl = `${this.baseApiUrl}api/user`;
+  private apiUrl = `${this.baseApiUrl}api/teacher`;
 
   // para fazer a requisição
   constructor(private http: HttpClient) {} 
 
   // recebendo conteúdo do formData e tipando ele como FormData
-  createUser(formData: FormData): Observable<FormData> { 
+  createTeacher(formData: FormData): Observable<FormData> { 
     return this.http.post<FormData>(this.apiUrl, formData);
   }
 }

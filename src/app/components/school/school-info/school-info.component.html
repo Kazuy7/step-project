@@ -24,11 +24,16 @@
 </div>
 
 <h1 class="pb-5">Turmas</h1>
-<div class="text-center classes">
+<div class="text-center classes" *ngIf="classrooms.length > 0; else noClassrooms">
 
-    <div class="inf">
-        <h5>INFANTIL</h5>
+
+    <div class="classroom" *ngFor="let classroom of classrooms">
+        <h1 class="m-0"><a routerLink="/classroom/{{ classroom.id }}">{{ classroom.ano }}</a></h1>
     </div>
+
+    <!-- <div class="inf" *ngIf="classrooms.ano == 'Infantil'; else '' ">
+        <app-classroom-list></app-classroom-list>
+    </div> -->
 
     <div class="fund-1">
         <h5>FUNDAMENTAL 1</h5>
@@ -43,3 +48,7 @@
     </div>
 
 </div>
+
+<ng-template #noClassrooms>
+    <h1>Não há turmas cadastradas!</h1>
+</ng-template>

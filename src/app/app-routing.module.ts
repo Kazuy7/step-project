@@ -6,34 +6,21 @@ import { NewSchoolComponent } from './components/school/new-school/new-school.co
 import { SchoolListComponent } from './components/step/school-list/school-list.component';
 import { SchoolInfoComponent } from './components/school/school-info/school-info.component';
 import { HomeStepComponent } from './components/home-step/home-step.component';
+import { NewClassroomComponent } from './components/school/new-classroom/new-classroom.component';
+import { ClassroomInfoComponent } from './components/school/classroom-info/classroom-info.component';
+import { ClassroomListComponent } from './components/school/classroom-list/classroom-list.component';
 
 const routes: Routes = [
       { path: '', component: HomeStepComponent },
       { path: 'login', component: LoginComponent },
       { path: 'user/new', component: NewUserComponent },
       { path: 'school/new', component: NewSchoolComponent },
+      { path: 'classroom/new', component: NewClassroomComponent },
       { path: 'school/list', component: SchoolListComponent},
-      { path: 'school/:id', component: SchoolInfoComponent}
+      { path: 'school/:id', component: SchoolInfoComponent},
+      { path: 'classroom/list', component: ClassroomListComponent},
+      { path: 'classroom/:id', component: ClassroomInfoComponent}
     ];
-  // {
-  //   path: '',
-  //   component: HomeStepComponent,
-  //   children: [
-  //     { path: '', component: HomeStepComponent },
-  //     { path: 'user/new', component: NewUserComponent },
-  //     { path: 'school/new-school', component: NewSchoolComponent },
-  //     { path: 'school/list', component: SchoolListComponent},
-  //     { path: 'school/:id', component: SchoolInfoComponent}
-  //   ]
-  // },
-  // {
-  //   path: '',
-  //   component: LoginComponent,
-  //   children: [
-  //     { path: '', redirectTo: 'login', pathMatch: 'full'},
-  //     { path: 'login', component: LoginComponent },
-  //   ]
-  // }
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

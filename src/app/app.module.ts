@@ -19,7 +19,12 @@ import { SchoolComponent } from './components/school/school/school.component';
 import { NewSchoolComponent } from './components/school/new-school/new-school.component';
 import { HomeStepComponent } from './components/home-step/home-step.component';
 import { HomeSchoolComponent } from './components/home-school/home-school.component';
-// import { AuthInterceptor } from './security/auth.interceptor';
+import { ClassroomComponent } from './components/school/classroom/classroom.component';
+import { NewClassroomComponent } from './components/school/new-classroom/new-classroom.component';
+import { ClassroomInfoComponent } from './components/school/classroom-info/classroom-info.component';
+import { TeacherComponent } from './components/school/teacher/teacher.component';
+import { NewTeacherComponent } from './components/school/new-teacher/new-teacher.component';
+import { ClassroomListComponent } from './components/school/classroom-list/classroom-list.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,12 @@ import { HomeSchoolComponent } from './components/home-school/home-school.compon
     NewSchoolComponent,
     HomeStepComponent,
     HomeSchoolComponent,
+    ClassroomComponent,
+    NewClassroomComponent,
+    ClassroomInfoComponent,
+    TeacherComponent,
+    NewTeacherComponent,
+    ClassroomListComponent,
   ],
   imports: [
     BrowserModule,

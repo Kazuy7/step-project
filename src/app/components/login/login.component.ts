@@ -1,37 +1,5 @@
-// import { Component, OnInit } from '@angular/core';
-// import { AuthService } from 'src/app/services/auth.service';
-
-// @Component({
-//   selector: 'app-login',
-//   templateUrl: './login.component.html',
-//   styleUrls: ['./login.component.css']
-// })
-// export class LoginComponent implements OnInit {
-
-//   credentials = { email: '', senha: '' };
-
-//   constructor(private authService: AuthService) {}
-
-//   ngOnInit() {}
-
-//   login() {
-//     if (this.credentials.email === '' || this.credentials.senha === '') {
-//       return;
-//     }
-
-//     this.authService.login(this.credentials).subscribe(response => {
-//       // armazena o token JWT no navegador
-//       localStorage.setItem('token', response.token);
-
-//       // redireciona para a página inicial
-//       window.location.href = '/';
-//     }, error => {
-//       console.log(error);
-//     });
-//   }
-// }
-
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -39,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
+  constructor(private http: HttpClient) { }
+
+  ngOnInit(): void { }
+
+  login(email: string, senha: string) {
+    const loginData = { email, senha };
+    this.http.post('http://localhost:3333/api/user/login', loginData)
+      .subscribe(response => {
+        console.log('Login successful:', response);
+        // Handle successful login response
+      }, error => {
+        console.error('Login failed:', error);
+        // Handle failed login response
+      });
+  }
 
 }
