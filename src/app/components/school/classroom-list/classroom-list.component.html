@@ -1,6 +1,7 @@
-<h1 class="pt-5">Lista de turmas</h1>
+<!-- <h1 class="pt-5">Lista de turmas</h1> -->
 
 <div class="list-container">
+    <!-- *ngIf="classrooms.schools_id === school.id" -->
 
     <div *ngIf="classrooms.length > 0; else noSchools" class="classrooms-container">
         <div class="classroom" *ngFor="let classroom of classrooms">

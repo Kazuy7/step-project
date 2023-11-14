@@ -1,1 +1,7 @@
-<p>home-school works!</p>
+<h1>Home</h1>
+
+<div *ngIf="school">
+    <ul>
+        <li><a routerLink="/school/{{ school.id }}/classroom/new">Cadastrar sala</a></li>
+    </ul>
+</div>

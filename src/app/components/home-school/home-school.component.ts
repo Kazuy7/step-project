@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { School } from 'src/app/interfaces/School';
 
 @Component({
   selector: 'app-home-school',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-school.component.css']
 })
 export class HomeSchoolComponent {
-
+  school?: School;
 }
