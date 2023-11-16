@@ -1,9 +1,10 @@
 <!-- <h1 class="pt-5">Lista de turmas</h1> -->
 
-<div class="list-container">
-    <!-- *ngIf="classrooms.schools_id === school.id" -->
+<div class="list-container" *ngFor="let classroom of classrooms">
+    <!-- PRECISA CHAMAR O ID ESTRANGEIRO DA TABELA CLASSROOM -->
+    <div *ngIf="school.id == classroom.schools"></div>
 
-    <div *ngIf="classrooms.length > 0; else noSchools" class="classrooms-container">
+    <div *ngIf="classrooms.length > 0;else noSchools" class="classrooms-container">
         <div class="classroom" *ngFor="let classroom of classrooms">
             <h1 class="m-0"><a routerLink="/classroom/{{ classroom.id }}">{{ classroom.ano }}</a></h1>
         </div>

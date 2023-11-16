@@ -15,6 +15,7 @@ export class ClassroomComponent {
 
   // ngOnInit é uma funcionalidade do Angular, então aqui, estamos inicializando o classroomForm e dizendo que ele é um FormGroup
   ngOnInit(): void {
+
     this.classroomForm = new FormGroup({
       id: new FormControl(''),
       professor: new FormControl('', [Validators.required]),
@@ -22,6 +23,7 @@ export class ClassroomComponent {
       ano: new FormControl('', [Validators.required]),
       periodo: new FormControl('', [Validators.required]),
       dia: new FormControl('', [Validators.required]),
+      schools_id: new FormControl(''), // desnecessário
       created_at: new FormControl(''),
       updated_at: new FormControl(''),
     });

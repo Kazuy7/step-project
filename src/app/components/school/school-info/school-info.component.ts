@@ -12,14 +12,17 @@ export class SchoolInfoComponent {
 
   school?: School;
 
-  constructor(private schoolService: SchoolService, private route: ActivatedRoute) {}
+  constructor(
+    private schoolService: SchoolService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     // Puxando id pela url
     const id = Number(this.route.snapshot.paramMap.get('id'));
     // Carregando dado pelo id
     this.schoolService.getSchool(id)
-    .subscribe((item) => (this.school = item.data));
+      .subscribe((item) => (this.school = item.data));
   }
 
 }

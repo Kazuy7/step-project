@@ -17,7 +17,7 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'user/new', component: NewUserComponent },
       { path: 'school/new', component: NewSchoolComponent },
-      // { path: 'classroom/new', component: NewClassroomComponent },
+      { path: 'classroom/new', component: NewClassroomComponent },
       { path: 'school/list', component: SchoolListComponent},
       { path: 'school/:id', component: SchoolInfoComponent},
       { path: 'school/:id/classroom/new', component: NewClassroomComponent },

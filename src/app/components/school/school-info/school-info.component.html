@@ -23,15 +23,16 @@
 
 </div>
 
-<h1 class="pb-5">Turmas</h1>
-
 <div *ngIf="school">
     <ul>
         <li><a routerLink="/school/{{ school.id }}/classroom/new">Cadastrar sala</a></li>
     </ul>
 </div>
 
+<h1 class="pb-5">Turmas</h1>
+
 <app-classroom-list></app-classroom-list>
+
 <!-- <div class="text-center classes">
 
     <div class="inf">

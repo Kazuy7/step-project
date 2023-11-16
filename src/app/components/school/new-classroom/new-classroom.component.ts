@@ -15,19 +15,22 @@ export class NewClassroomComponent {
   constructor(
   private classromService: ClassroomService,
   private messagesService: MessagesService,
-  private router: Router
+  private router: Router,
   ) {}
 
   // Chamando o classroom do tipo Classroom e dizendo que é uma operação assíncrona por causa da interação com a API
   async createHandler(classroom: Classroom) {
     // Transformando o formulário do Angular em um formData
     const formData = new FormData()
+    const id = this.router.url.substring(this.router.url.indexOf('l/') + 2, +9);
 
     formData.append("professor", classroom.professor)
     formData.append("numeroalunos", classroom.numeroalunos)
     formData.append("ano", classroom.ano)
     formData.append("periodo", classroom.periodo)
     formData.append("dia", classroom.dia)
+    formData.append("schools_id", id)
+
     
     await this.classromService.createClassroom(formData).subscribe();
 
