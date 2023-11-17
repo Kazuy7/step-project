@@ -1,3 +1,4 @@
+<!-- INFO DA ESCOLA -->
 <div class="school-container row" *ngIf="school">
 
     <h1>Escola <span>{{ school.nomeescola }}</span></h1>
@@ -22,13 +23,34 @@
     </div>
 
 </div>
+<!-- INFO DA ESCOLA -->
 
+
+<!-- OPÇÕES -->
 <div *ngIf="school">
-    <ul>
-        <li><a routerLink="/school/{{ school.id }}/classroom/new">Cadastrar sala</a></li>
-    </ul>
-</div>
+    <div class="dropend">
+        <button type="button" class="btn btn-2 dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false"><img src="../../../assets/classroom-icon-white.png">Turmas</button>
 
+        <ul class="dropdown-menu">
+            <li><a routerLink="/school/{{ school.id }}/classroom/new" class="link">Cadastrar</a></li>
+            <li><a routerLink="" class="link">Editar</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="dropend">
+        <button type="button" class="btn btn-1 dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false"><img src="../../../assets/school-icon-white.png">Escola</button>
+
+        <ul class="dropdown-menu">
+            <li><a routerLink="" class="link">Editar</a></li>
+        </ul>
+    </div>
+</div>
+<!-- OPÇÕES -->
+
+
+<!-- LISTAGEM DAS TURMAS -->
 <h1 class="pb-5">Turmas</h1>
 
 <div class="classrooms-container" *ngIf="classrooms.length > 0;else noSchools">
@@ -78,7 +100,8 @@
         </div>
         <div *ngFor="let classroom of classrooms" class="w-100">
             <div *ngIf="classroom.schools_id == school?.id && classroom.ano == 'Ensino médio'" class="classroom">
-                <h5 class="m-0"><a routerLink="/school/{{ school?.id }}/classroom/{{ classroom.id }}">{{ classroom.ano }}</a>
+                <h5 class="m-0"><a routerLink="/school/{{ school?.id }}/classroom/{{ classroom.id }}">{{ classroom.ano
+                        }}</a>
                 </h5>
             </div>
         </div>
@@ -89,35 +112,4 @@
 <ng-template #noSchools>
     <h1>Não há turmas cadastradas!</h1>
 </ng-template>
-
-<!-- <div class="classrooms-container"> -->
-
-<!-- <div *ngFor="let classroom of classrooms" class="classrooms">
-    <div *ngIf="classroom.schools_id == school?.id && classroom.ano == 'Infantil'" class="classroom">
-        <h5 class="m-0"><a routerLink="/school/{{ school?.id }}/classroom/{{ classroom.id }}">{{ classroom.ano }}</a>
-        </h5>
-    </div>
-</div> -->
-
-<!-- <div *ngFor="let classroom of classrooms" class="classrooms">
-    <div *ngIf="classroom.schools_id == school?.id && classroom.ano == 'Fundamental 1'" class="classroom">
-        <h5 class="m-0"><a routerLink="/school/{{ school?.id }}/classroom/{{ classroom.id }}">{{ classroom.ano }}</a>
-        </h5>
-    </div>
-</div> -->
-
-<!-- <div *ngFor="let classroom of classrooms" class="classrooms">
-    <div *ngIf="classroom.schools_id == school?.id && classroom.ano == 'Fundamental 2'" class="classroom">
-        <h5 class="m-0"><a routerLink="/school/{{ school?.id }}/classroom/{{ classroom.id }}">{{ classroom.ano }}</a>
-        </h5>
-    </div>
-</div> -->
-
-<!-- <div *ngFor="let classroom of classrooms" class="classrooms">
-    <div *ngIf="classroom.schools_id == school?.id && classroom.ano == 'Ensino médio'" class="classroom">
-        <h5 class="m-0"><a routerLink="/school/{{ school?.id }}/classroom/{{ classroom.id }}">{{ classroom.ano }}</a>
-        </h5>
-    </div>
-</div> -->
-
-<!-- </div> -->
+<!-- LISTAGEM DAS TURMAS -->

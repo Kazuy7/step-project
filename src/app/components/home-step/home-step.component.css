@@ -7,11 +7,10 @@
         /* margin-top: 20px; */
     }
 
-    .btn {
-        /* border: 1px solid yellow; */
-        color: black;
+    button {
         width: 80%;
         text-align: end;
+        color: white;
     }
 
     .image-container {
@@ -19,7 +18,7 @@
         width: 60%;
         text-align: center;
     }
-    
+
     .image-container img {
         /* border: 1px solid yellow; */
         width: 400px;
@@ -42,34 +41,12 @@
         justify-content: center;
     }
 
-    .btn {
-        /* border: 1px solid yellow; */
-        color: black;
+    button {
         width: 80%;
         text-align: center;
+        color: white;
     }
 }
-
-.btn-user {
-    background-color: #1fa5bc;
-}
-
-/* .btn-school {
-    background-color: #e30613;
-} */
-
-.btn-component {
-    background-color: #f8b037;
-}
-
-.btn-kit {
-    background-color: #2daae0;
-}
-
-.btn-activity {
-    background-color: #e94e1b;
-}
-
 
 .dropend img {
     /* border: 1px solid green; */

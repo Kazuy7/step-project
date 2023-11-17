@@ -25,6 +25,33 @@ h5 {
     border-left: 2px solid black;
 }
 
+button {
+    width: 20%;
+    text-align: end;
+    color: white;
+}
+
+.dropend img {
+    /* border: 1px solid green; */
+    width: 32px;
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    background-color: black;
+}
+
+.link {
+    /* border: 1px solid red; */
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.link:hover {
+    color: grey;
+}
+
 .classrooms-container {
     display: flex;
     justify-content: space-between;
@@ -41,7 +68,7 @@ h5 {
 }
 
 .classroom {
-    height: 50px;
+    height: 60px;
     width: 100%;
     border: 1px solid grey;
     border-radius: 10px;
@@ -50,6 +77,10 @@ h5 {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+}
+
+.classroom:hover {
+    background-color: grey;
 }
 
 .inf {

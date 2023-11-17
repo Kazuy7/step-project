@@ -105,3 +105,40 @@ input[type="submit"]:hover {
     padding-left: 5px;
 }
 /* FORM  */
+
+/* BTNs */
+.btn-1 {
+    background-color: #1fa5bc;
+}
+.btn-1:hover {
+    background-color: #1a7a8b;
+}
+
+.btn-2 {
+    background-color: #f8b037;
+}
+.btn-2:hover {
+    background-color: #c0892a;
+}
+
+.btn-3 {
+    background-color: #2daae0;
+}
+.btn-3:hover {
+    background-color: #217fa7;
+}
+
+.btn-4 {
+    background-color: #e94e1b;
+}
+.btn-4:hover {
+    background-color: #ad3a14;
+}
+
+.btn-5 {
+    background-color: #e30613;
+}
+.btn-5:hover {
+    background-color: #a50610;
+}
+/* BTNs */
