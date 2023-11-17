@@ -1,8 +1,4 @@
-<!-- <h1 class="pt-5">Lista de turmas</h1> -->
-
-<div class="list-container" *ngFor="let classroom of classrooms">
-    <!-- PRECISA CHAMAR O ID ESTRANGEIRO DA TABELA CLASSROOM -->
-    <div *ngIf="school.id == classroom.schools"></div>
+<div class="list-container">
 
     <div *ngIf="classrooms.length > 0;else noSchools" class="classrooms-container">
         <div class="classroom" *ngFor="let classroom of classrooms">

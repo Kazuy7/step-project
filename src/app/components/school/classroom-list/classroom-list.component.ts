@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { ClassroomService } from 'src/app/services/classroom.service';
 import { Classroom } from 'src/app/interfaces/Classroom';
 import { environment } from 'src/environments/environment';
-import { School } from 'src/app/interfaces/School';
 
 @Component({
   selector: 'app-classroom-list',
@@ -12,7 +11,6 @@ import { School } from 'src/app/interfaces/School';
 export class ClassroomListComponent {
   allClassrooms: Classroom[] = []
   classrooms: Classroom[] = []
-  school!: School;
   baseApiUrl = environment.baseApiUrl
 
   constructor(private classroomService: ClassroomService) {}
