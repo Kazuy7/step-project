@@ -1,10 +1,12 @@
 @media(min-width: 768px) {
-    .nav-container {
-        /* border: 1px solid red; */
+    .nav-container-mobile {
+        display: none;
+    }
+
+    .nav-container-desktop {
         display: flex;
         flex-direction: column;
         width: 40%;
-        /* margin-top: 20px; */
     }
 
     button {
@@ -14,29 +16,28 @@
     }
 
     .image-container {
-        /* border: 1px solid yellow; */
         width: 60%;
         text-align: center;
     }
 
     .image-container img {
-        /* border: 1px solid yellow; */
         width: 400px;
         padding: 20px;
     }
 }
 
 @media(max-width: 767px) {
-    .nav-container {
-        /* border:  1px solid red; */
+    .nav-container-desktop {
+        display: none;
+    }
+
+    .nav-container-mobile {
         display: flex;
         flex-direction: column;
         width: 100%;
-        /* margin-top: 20px; */
     }
 
     .dropend {
-        /* border: 1px solid green; */
         display: flex;
         justify-content: center;
     }
@@ -46,10 +47,37 @@
         text-align: center;
         color: white;
     }
+
+    .btn-nav {
+        margin: 0 10px 10px;
+    }
+
+    ul a {
+        color: black;
+    }
+
+    .ul a:hover {
+        color: grey;
+    }
+
+    .year-title {
+        border-radius: 5px;
+        padding: 5px 0;
+    }
+
+    .year-title:hover {
+        background-color: black;
+    }
+
+    .btn-collapse {
+        background-color: transparent;
+        border: 0px;
+        text-align: center;
+        width: 100%;
+    }
 }
 
-.dropend img {
-    /* border: 1px solid green; */
+img {
     width: 32px;
     margin-right: 10px;
 }
@@ -59,7 +87,6 @@
 }
 
 .link {
-    /* border: 1px solid red; */
     color: white;
     font-size: 20px;
     margin-left: 10px;

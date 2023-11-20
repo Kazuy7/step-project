@@ -1,3 +1,137 @@
+@media(min-width: 768px) {
+    .school-container {
+        border: 1px solid rgba(128, 128, 128, 0.300);
+        border-radius: 20px;
+        background-color: rgb(235, 235, 235);
+        display: flex;
+        align-items: center;
+        margin: 50px 0 50px 0;
+        padding: 10px;
+    }
+
+    .iden {
+        text-align: right;
+        width: 50%;
+    }
+
+    .end {
+        width: 50%;
+        text-align: start;
+        border-left: 2px solid black;
+    }
+
+    .classrooms-desktop {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .classrooms-mobile {
+        display: none;
+    }
+
+    .classrooms-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+
+    }
+
+    .classroom {
+        height: 60px;
+        width: 100%;
+        border: 1px solid grey;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .classroom:hover {
+        background-color: rgb(235, 235, 235);
+    }
+
+
+    .year-title {
+        height: 60px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        width: 20%;
+        text-align: end;
+        color: white;
+    }
+}
+
+@media(max-width: 768px) {
+    .iden h3 {
+        /* text-align: right; */
+        font-size: 20px;
+        /* width: 50%; */
+    }
+
+    .school-container {
+        padding: 20px 0;
+        margin: 0 5px;
+    }
+
+    .end {
+        /* width: 50%; */
+        text-align: start;
+        /* border-left: 2px solid black; */
+    }
+
+    .btns-container {
+        padding-bottom: 20px;
+        margin: 0 15px;
+    }
+
+    button {
+        width: 50%;
+        text-align: end;
+        color: white;
+    }
+
+    .classrooms-desktop {
+        display: none;
+    }
+
+    .classrooms-info {
+        margin: 0 10px 10px;
+    }
+
+    .classroom a:hover {
+        color: grey;
+    }
+
+    .year-title {
+        border-radius: 5px;
+        padding: 5px 0;
+    }
+
+    .year-title:hover {
+        background-color: black;
+    }
+
+    .btn-collapse {
+        background-color: transparent;
+        border: 0px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
 span {
     color: #1fa5bc;
 }
@@ -6,33 +140,8 @@ h5 {
     margin: 0;
 }
 
-.school-container {
-    border: 1px solid rgba(128, 128, 128, 0.300);
-    border-radius: 20px;
-    background-color: rgb(235, 235, 235);
-    display: flex;
-    align-items: center;
-    margin: 50px 0 50px 0;
-    padding: 10px;
-}
-
-.iden {
-    text-align: right;
-}
-
-.end {
-    text-align: start;
-    border-left: 2px solid black;
-}
-
-button {
-    width: 20%;
-    text-align: end;
-    color: white;
-}
 
 .dropend img {
-    /* border: 1px solid green; */
     width: 32px;
     margin-right: 10px;
 }
@@ -42,7 +151,6 @@ button {
 }
 
 .link {
-    /* border: 1px solid red; */
     color: white;
     font-size: 20px;
     margin-left: 10px;
@@ -50,80 +158,4 @@ button {
 
 .link:hover {
     color: grey;
-}
-
-.classrooms-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.classrooms-info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    
-}
-
-.classroom {
-    height: 60px;
-    width: 100%;
-    border: 1px solid grey;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.classroom:hover {
-    background-color: grey;
-}
-
-.inf {
-    height: 60px;
-    width: 100%;
-    background-color: #e94e1b;
-    border-radius: 10px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.fund-1 {
-    height: 60px;
-    width: 100%;
-    background-color: #f8b037;
-    border-radius: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fund-2 {
-    height: 60px;
-    width: 100%;
-    background-color: #2daae0;
-    border-radius: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.med {
-    height: 60px;
-    width: 100%;
-    background-color: #1fa5bc;
-    border-radius: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

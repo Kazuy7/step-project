@@ -14,6 +14,10 @@
         border-radius: 10px;
         background-color: white;
     }
+
+    .school a:hover {
+        color: #e30613;
+    }
 }
 
 @media(max-width: 768px) {
@@ -54,20 +58,17 @@
 }
 
 .search-container form{
-    /* border: 1px solid red; */
     width: 60%;
     position: relative;
 }
 
 .search-container fa-icon {
-    /* border: 1px solid red; */
     position: absolute;
     top: 12px;
     left: 12px;
 }
 
 .search-container input {
-    /* border: 1px solid red; */
     padding: 0.5em;
     width: 100%;
     text-align: center;

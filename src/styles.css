@@ -9,12 +9,8 @@
 
 a {
     text-decoration: none;
-    transition: 0.4s;
+    transition: 0.2s;
     color: black;
-}
-
-a:hover {
-    color: #e94e1b;
 }
 
 li {
@@ -34,15 +30,13 @@ ul {
         flex-direction: column;
         margin: 0;
     }
-    
 }
 
 @media(max-height: 767px) {
     form {
         width: 100%;
         margin: 0;
-    }
-    
+    }  
 }
 
 .form-group {
@@ -58,6 +52,7 @@ ul {
 
 h1 {
     text-align: center;
+    font-size: 40px;
 }
 
 form option, select {
@@ -110,35 +105,30 @@ input[type="submit"]:hover {
 .btn-1 {
     background-color: #1fa5bc;
 }
-.btn-1:hover {
-    background-color: #1a7a8b;
-}
 
 .btn-2 {
     background-color: #f8b037;
-}
-.btn-2:hover {
-    background-color: #c0892a;
 }
 
 .btn-3 {
     background-color: #2daae0;
 }
-.btn-3:hover {
-    background-color: #217fa7;
-}
 
 .btn-4 {
     background-color: #e94e1b;
-}
-.btn-4:hover {
-    background-color: #ad3a14;
 }
 
 .btn-5 {
     background-color: #e30613;
 }
-.btn-5:hover {
-    background-color: #a50610;
+
+.btn-step {
+    padding: 7px 12px;
+    border: 1px transparent;
+    border-radius: 5px;
+}
+
+.btn-step:hover {
+background-color: black;
 }
 /* BTNs */

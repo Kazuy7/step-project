@@ -1,9 +1,10 @@
 <div class="d-flex pt-5 pb-5">
 
-    <div class="nav-container">
+    <!-- VIEW DESKTOP -->
+    <div class="nav-container-desktop">
 
         <div class="dropend">
-            <button type="button" class="btn btn-1 dropdown-toggle" data-bs-toggle="dropdown"
+            <button type="button" class="btn-step btn-1 dropdown-toggle" data-bs-toggle="dropdown"
                 aria-expanded="false"><img src="../../../assets/user-icon-white.png">Usuários</button>
                 
             <ul class="dropdown-menu">
@@ -15,7 +16,7 @@
         <br>
 
         <div class="dropend">
-            <button type="button" class="btn btn-5 dropdown-toggle" data-bs-toggle="dropdown"
+            <button type="button" class="btn-step btn-5 dropdown-toggle" data-bs-toggle="dropdown"
                 aria-expanded="false"><img src="../../../assets/school-icon-white.png">Escolas</button>
                 
             <ul class="dropdown-menu">
@@ -27,7 +28,7 @@
         <br>
 
         <div class="dropend">
-            <button type="button" class="btn btn-2 dropdown-toggle" data-bs-toggle="dropdown"
+            <button type="button" class="btn-step btn-2 dropdown-toggle" data-bs-toggle="dropdown"
                 aria-expanded="false"><img src="../../../assets/component-icon-white.png">Componentes</button>
                 
             <ul class="dropdown-menu">
@@ -39,7 +40,7 @@
         <br>
 
         <div class="dropend">
-            <button type="button" class="btn btn-3 dropdown-toggle" data-bs-toggle="dropdown"
+            <button type="button" class="btn-step btn-3 dropdown-toggle" data-bs-toggle="dropdown"
                 aria-expanded="false"><img src="../../../assets/kit-icon-white.png">Kits</button>
                 
             <ul class="dropdown-menu">
@@ -51,7 +52,7 @@
         <br>
 
         <div class="dropend">
-            <button type="button" class="btn btn-4 dropdown-toggle" data-bs-toggle="dropdown"
+            <button type="button" class="btn-step btn-4 dropdown-toggle" data-bs-toggle="dropdown"
                 aria-expanded="false"><img src="../../../assets/activity-icon-white.png">Atividades</button>
                 
             <ul class="dropdown-menu">
@@ -61,6 +62,83 @@
         </div>
 
     </div>
+    <!-- VIEW DESKTOP -->
+
+    <!-- VIEW MOBILE/TABLET -->
+    <div class="nav-container-mobile">
+
+        <div class="btn-nav">
+            <div class="year-title btn-1">
+                <button data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1"
+                aria-expanded="false" aria-controls="multiCollapseExample1" class="btn-collapse"><img src="../../../assets/user-icon-white.png">Usuários</button>
+            </div>
+            
+            <div class="collapse classroom-collapse" id="multiCollapseExample1">
+                <ul>
+                    <li><a routerLink="/user/new" class="link">Cadastrar</a></li>
+                    <li><a routerLink="" class="link">Listar</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-nav">
+            <div class="year-title btn-5">
+                <button data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2"
+                aria-expanded="false" aria-controls="multiCollapseExample2" class="btn-collapse"><img src="../../../assets/school-icon-white.png">Escolas</button>
+            </div>
+            
+            <div class="collapse classroom-collapse" id="multiCollapseExample2">
+                <ul>
+                    <li><a routerLink="/school/new" class="link">Cadastrar</a></li>
+                    <li><a routerLink="/school/list" class="link">Listar</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-nav">
+            <div class="year-title btn-2">
+                <button data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3"
+                aria-expanded="false" aria-controls="multiCollapseExample3" class="btn-collapse"><img src="../../../assets/component-icon-white.png">Componentes</button>
+            </div>
+            
+            <div class="collapse classroom-collapse" id="multiCollapseExample3">
+                <ul>
+                    <li><a routerLink="" class="link">Cadastrar</a></li>
+                    <li><a routerLink="" class="link">Listar</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-nav">
+            <div class="year-title btn-3">
+                <button data-bs-toggle="collapse" data-bs-target="#multiCollapseExample4"
+                aria-expanded="false" aria-controls="multiCollapseExample4" class="btn-collapse"><img src="../../../assets/kit-icon-white.png">Kits</button>
+            </div>
+            
+            <div class="collapse classroom-collapse" id="multiCollapseExample4">
+                <ul>
+                    <li><a routerLink="" class="link">Cadastrar</a></li>
+                    <li><a routerLink="" class="link">Listar</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-nav">
+            <div class="year-title btn-4">
+                <button data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5"
+                aria-expanded="false" aria-controls="multiCollapseExample5" class="btn-collapse"><img src="../../../assets/activity-icon-white.png">Escolas</button>
+            </div>
+            
+            <div class="collapse classroom-collapse" id="multiCollapseExample5">
+                <ul>
+                    <li><a routerLink="" class="link">Cadastrar</a></li>
+                    <li><a routerLink="" class="link">Listar</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- VIEW MOBILE/TABLET -->
 
     <div class="image-container d-none d-md-block">
         <img src="../../../assets/step_sete.png">
