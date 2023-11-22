@@ -6,6 +6,7 @@
 
   <div class="iden">
     <h3><b>Número de alunos:</b> {{ classroom.numeroalunos }}</h3>
+    <h3><b>Professor:</b> {{ classroom.professor }}</h3>
     <h3><b>Ano:</b> {{ classroom.ano }}</h3>
     <h3><b>Período:</b> {{ classroom.periodo }}</h3>
     <h3><b>Dia:</b> {{ classroom.dia }}</h3>
@@ -19,7 +20,7 @@
         src="../../../assets/classroom-icon-white.png">Turma</button>
 
     <ul class="dropdown-menu">
-      <li><a routerLink="/classroom/edit/{{ classroom!.id }}" class="link">Editar</a></li>
+      <li><a routerLink="/school/{{ classroom.schools_id! }}/classroom/edit/{{ classroom.id }}" class="link">Editar</a></li>
     </ul>
   </div>
 </div>

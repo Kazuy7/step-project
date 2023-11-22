@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClassroomService } from 'src/app/services/classroom.service';
 import { Classroom } from 'src/app/interfaces/Classroom';
+import { School } from 'src/app/interfaces/School';
 
 @Component({
   selector: 'app-classroom-info',
@@ -11,6 +12,7 @@ import { Classroom } from 'src/app/interfaces/Classroom';
 export class ClassroomInfoComponent {
   
   classroom?: Classroom;
+  school?: School;
 
   constructor(private classroomService: ClassroomService, private route: ActivatedRoute) {}
 

@@ -34,8 +34,8 @@ export class NewTeacherComponent {
 
     await this.teacherService.createTeacher(formData).subscribe();
 
-    this.messagesService.add("Turma cadastrada com sucesso!")
+    this.messagesService.add("Professor cadastrado com sucesso!")
 
-    this.router.navigate(['/'])
+    this.router.navigate(['/school/', id])
   }
 }

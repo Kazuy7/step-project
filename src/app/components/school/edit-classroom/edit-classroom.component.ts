@@ -17,7 +17,7 @@ export class EditClassroomComponent {
     private classroomService: ClassroomService,
     private route: ActivatedRoute,
     private messagesService: MessagesService,
-    private router: Router
+    private router: Router,
     ) { }
 
   ngOnInit(): void {
@@ -26,6 +26,8 @@ export class EditClassroomComponent {
     this.classroomService.getClassroom(id).subscribe((item) => {
       this.classroom = item.data
     })
+
+    console.log(this.classroom)
   }
 
   async editHandler(classroomData: Classroom) {
@@ -44,6 +46,6 @@ export class EditClassroomComponent {
 
     this.messagesService.add(`Informações atualizadas com sucesso!`)
 
-    this.router.navigate(['/'])
+    this.router.navigate(['/school/', id, 'classroom', id])
   }
 }

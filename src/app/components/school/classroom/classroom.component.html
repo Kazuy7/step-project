@@ -7,7 +7,10 @@
     <div class="form-group" *ngIf="teachers.length > 0; else noTeachers">
         <label for="professor">Professor responsável:</label>
         <select formControlName="professor">
-            <option *ngFor="let teacher of teachers">{{ teacher.email }}</option>
+            <option selected value="">Selecione um professor</option>
+            <option *ngFor="let teacher of teachers" value="{{ teacher.email }}">
+                <div *ngIf="teacher.schools_id == school?.id">{{ teacher.email }}</div>
+            </option>
         </select>
     </div>
     <ng-template #noTeachers class="classrooms-container-mob">

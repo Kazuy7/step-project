@@ -49,6 +49,6 @@ export class EditSchoolComponent {
 
     this.messagesService.add(`Informações atualizadas com sucesso!`)
 
-    this.router.navigate(['/'])
+    this.router.navigate(['/school/', id])
   }
 }

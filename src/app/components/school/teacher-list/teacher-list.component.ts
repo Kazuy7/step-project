@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { TeacherService } from 'src/app/services/teacher.service';
 import { Teacher } from 'src/app/interfaces/Teacher';
 import { environment } from 'src/environments/environment';
+import { School } from 'src/app/interfaces/School';
+import { SchoolService } from 'src/app/services/school.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-list',
@@ -12,8 +15,13 @@ export class TeacherListComponent {
   allTeachers: Teacher[] = []
   teachers: Teacher[] = []
   baseApiUrl = environment.baseApiUrl
+  school?: School;
 
-  constructor(private teacherService: TeacherService) {}
+  constructor(
+    private teacherService: TeacherService,
+    private schoolService: SchoolService,
+    private route: ActivatedRoute,
+    ) {}
 
   ngOnInit(): void {
     this.teacherService.getTeachers().subscribe((items) => {
@@ -27,5 +35,10 @@ export class TeacherListComponent {
       this.allTeachers = data;
       this.teachers = data;
     })
+
+        // Puxando id pela url
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    // Carregando dado pelo id
+    this.schoolService.getSchool(id).subscribe((item) => (this.school = item.data));
   }
 }
