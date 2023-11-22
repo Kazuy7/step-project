@@ -1,16 +1,23 @@
 <h1 class="pt-5">CADASTRO DE TURMA</h1>
 
 <form (ngSubmit)="submit()" [formGroup]="classroomForm" #formDir="ngForm" class="pb-5">
-    
-    <h2>Identificação</h2>
-    <div class="form-group">
-        <label for="professor">Professor:</label>
-        <input type="text" placeholder="Nome do professor" formControlName="professor" required>
-        <div *ngIf="professor.invalid && formDir.submitted" class="validation-error">
-            <p *ngIf="professor.errors?.['required']">O nome do(a) professor(a) é obrigatório</p>
-        </div>
+
+    <!-- --------------------------------------------------------------- -->
+
+    <div class="form-group" *ngIf="teachers.length > 0; else noTeachers">
+        <label for="professor">Professor responsável:</label>
+        <select formControlName="professor">
+            <option *ngFor="let teacher of teachers">{{ teacher.email }}</option>
+        </select>
     </div>
-    
+    <ng-template #noTeachers class="classrooms-container-mob">
+        <select>
+            <option selected>Não há professores cadastrados!</option>
+        </select>
+    </ng-template>
+
+    <!-- --------------------------------------------------------------- -->
+
     <div class="form-group">
         <label for="numeroalunos">Número de alunos:</label>
         <input type="text" placeholder="Número de alunos" formControlName="numeroalunos" required>
@@ -18,12 +25,25 @@
             <p *ngIf="numeroalunos.errors?.['required']">O número de alunos é obrigatório</p>
         </div>
     </div>
-    
+
     <div class="form-group">
-        <label for="ano">Ano:</label>
-        <input type="text" placeholder="Ano" formControlName="ano" required>
+        <label for="ano">Nível escolar:</label>
+        <select formControlName="ano" required>
+            <option selected>Infantil</option>
+            <option>Fundamental 1</option>
+            <option>Fundamental 2</option>
+            <option>Ensino Médio</option>
+        </select>
         <div *ngIf="ano.invalid && formDir.submitted" class="validation-error">
             <p *ngIf="ano.errors?.['required']">O ano é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="turma">Turma:</label>
+        <input type="text" placeholder="Turma" formControlName="turma" required>
+        <div *ngIf="turma.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="turma.errors?.['required']">O número de alunos é obrigatório</p>
         </div>
     </div>
 

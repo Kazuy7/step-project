@@ -1,9 +1,36 @@
-.street {
-    width: 80%;
+@media(min-width: 768px) {
+    .street {
+        width: 80%;
+    }
+
+    .street-number {
+        width: 20%;
+        margin-left: 10px;
+    }
 }
 
-.street-number {
-    width: 20%;
+@media(max-width: 768px) {
+    .street {
+        width: 70%;
+    }
+
+    .street-number {
+        width: 30%;
+        margin-left: 10px;
+    }
+
+    .city {
+        width: 40%;
+        margin-left: 10px;
+    }
+}
+
+.iden-container {
+    margin: 20px 10px;
+}
+
+.end-container {
+    margin: 20px 10px;
 }
 
 .neighborhood {
@@ -12,6 +39,7 @@
 
 .city {
     width: 40%;
+    margin-left: 10px;
 }
 
 .state {
@@ -20,4 +48,5 @@
 
 .zip-code {
     width: 40%;
+    margin-left: 10px;
 }

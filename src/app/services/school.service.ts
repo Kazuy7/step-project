@@ -29,4 +29,10 @@ export class SchoolService {
   createSchool(formData: FormData): Observable<FormData> {
     return this.http.post<FormData>(this.apiUrl, formData);
   }
+
+  // Chamando o método de edição de dados
+  updateSchool(id: number, formData: FormData): Observable<FormData> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put<FormData>(url, formData); 
+  }
 }

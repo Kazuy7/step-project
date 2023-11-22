@@ -1,1 +1,34 @@
-<p>teacher works!</p>
+<h1 class="pt-5">CADASTRO DE PROFESSOR</h1>
+
+<form (ngSubmit)="submit()" [formGroup]="classroomForm" #formDir="ngForm" class="pb-5">
+    
+    <!-- <h2>Usuário do professor</h2> -->
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" placeholder="Email" formControlName="email" required>
+        <div *ngIf="email.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="email.errors?.['required']">O email é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input type="password" placeholder="Senha" formControlName="senha" required>
+        <div *ngIf="senha.invalid && formDir.submitted" class="validation-error">
+            <p *ngIf="senha.errors?.['required']">A senha é obrigatória</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="status">Status:</label>
+        <select formControlName="status">
+          <option selected>Ativo</option>
+          <option>Inativo</option>
+        </select>
+    </div>
+
+    <div class="btn-register">
+        <input type="submit" value="{{ btnText }}">
+    </div>
+
+</form>

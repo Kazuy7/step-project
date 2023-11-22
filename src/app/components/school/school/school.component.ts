@@ -10,26 +10,28 @@ import { School } from 'src/app/interfaces/School';
 export class SchoolComponent {
   @Output() onSubmit = new EventEmitter<School>()
   @Input() btnText!: string
+  @Input() schoolData: School | null = null
 
   schoolForm!: FormGroup;
+
 
   // ngOnInit é uma funcionalidade do Angular, então aqui, estamos inicializando o schoolForm e dizendo que ele é um FormGroup
   ngOnInit(): void {
     this.schoolForm = new FormGroup({
-      id: new FormControl(''),
-      nomeescola: new FormControl('', [Validators.required]),
-      razaosocial: new FormControl('', [Validators.required]),
-      cnpj: new FormControl('', [Validators.required]),
-      responsavel: new FormControl('', [Validators.required]),
-      telefone: new FormControl('', [Validators.required]),
-      rua: new FormControl('', [Validators.required]),
-      numero: new FormControl('', [Validators.required]),
-      bairro: new FormControl('', [Validators.required]),
-      cidade: new FormControl('', [Validators.required]),
-      estado: new FormControl('', [Validators.required]),
-      cep: new FormControl('', [Validators.required]),
-      created_at: new FormControl(''),
-      updated_at: new FormControl(''),
+      id: new FormControl(this.schoolData ? this.schoolData.id : ''),
+      nomeescola: new FormControl(this.schoolData ? this.schoolData.nomeescola : '', [Validators.required]),
+      razaosocial: new FormControl(this.schoolData ? this.schoolData.razaosocial : '', [Validators.required]),
+      cnpj: new FormControl(this.schoolData ? this.schoolData.cnpj : '', [Validators.required]),
+      responsavel: new FormControl(this.schoolData ? this.schoolData.responsavel : '', [Validators.required]),
+      telefone: new FormControl(this.schoolData ? this.schoolData.telefone : '', [Validators.required]),
+      rua: new FormControl(this.schoolData ? this.schoolData.rua : '', [Validators.required]),
+      numero: new FormControl(this.schoolData ? this.schoolData.numero : '', [Validators.required]),
+      bairro: new FormControl(this.schoolData ? this.schoolData.bairro : '', [Validators.required]),
+      cidade: new FormControl(this.schoolData ? this.schoolData.cidade : '', [Validators.required]),
+      estado: new FormControl(this.schoolData ? this.schoolData.estado : '', [Validators.required]),
+      cep: new FormControl(this.schoolData ? this.schoolData.cep : '', [Validators.required]),
+      created_at: new FormControl(this.schoolData ? this.schoolData.created_at : ''),
+      updated_at: new FormControl(this.schoolData ? this.schoolData.updated_at : ''),
     });
   }
 

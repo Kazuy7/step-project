@@ -30,4 +30,10 @@ export class ClassroomService {
     // const url = `${this.apiUrl}/`
     return this.http.post<FormData>(this.apiUrl, formData);
   }
+
+    // Chamando o método de edição de dados
+    updateClassroom(id: number, formData: FormData): Observable<FormData> {
+      const url = `${this.apiUrl}/${id}`;
+      return this.http.put<FormData>(url, formData); 
+    }
 }

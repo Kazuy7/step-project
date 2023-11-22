@@ -25,6 +25,10 @@ import { ClassroomInfoComponent } from './components/school/classroom-info/class
 import { TeacherComponent } from './components/school/teacher/teacher.component';
 import { NewTeacherComponent } from './components/school/new-teacher/new-teacher.component';
 import { ClassroomListComponent } from './components/school/classroom-list/classroom-list.component';
+import { EditSchoolComponent } from './components/school/edit-school/edit-school.component';
+import { TeacherInfoComponent } from './components/school/teacher-info/teacher-info.component';
+import { TeacherListComponent } from './components/school/teacher-list/teacher-list.component';
+import { EditClassroomComponent } from './components/school/edit-classroom/edit-classroom.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +51,10 @@ import { ClassroomListComponent } from './components/school/classroom-list/class
     TeacherComponent,
     NewTeacherComponent,
     ClassroomListComponent,
+    EditSchoolComponent,
+    TeacherInfoComponent,
+    TeacherListComponent,
+    EditClassroomComponent,
   ],
   imports: [
     BrowserModule,

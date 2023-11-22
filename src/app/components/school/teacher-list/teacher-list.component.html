@@ -1,0 +1,13 @@
+<div class="list-container">
+
+    <div *ngIf="teachers.length > 0;else noSchools" class="teachers-container">
+        <div class="teacher" *ngFor="let teacher of teachers">
+            <h1 class="m-0"><a routerLink="/teacher/{{ teacher.id }}">{{ teacher.email }}</a></h1>
+        </div>
+    </div>
+
+    <ng-template #noSchools>
+        <h1>Não há professores cadastrados!</h1>
+    </ng-template>
+
+</div>

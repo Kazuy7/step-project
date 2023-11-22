@@ -6,6 +6,7 @@ export interface Teacher {
     status: string;
     created_at?: string;
     updated_at?: string;
+    schools_id?: string;
     schools?: [{ id?: number;
         nomeescola: string;
         razaosocial: string;

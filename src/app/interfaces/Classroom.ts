@@ -3,6 +3,7 @@ export interface Classroom {
     professor: string;
     numeroalunos: string;
     ano: string;
+    turma: string;
     periodo: string;
     dia: string;
     created_at?: string;

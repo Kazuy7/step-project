@@ -1,8 +1,21 @@
+@media(min-width: 768px) {
+    .message {
+        width: 30%;
+        margin-left: 35%;
+    }
+}
+
+
+@media(max-width: 767px) {
+    .message {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
 .message {
     position: fixed;
     top: 3em;
-    width: 26%;
-    margin-left: 37%;
     background-color: rgba(0, 0, 0, 0.849);
     border: 3px solid black;
     border-radius: 15px;
