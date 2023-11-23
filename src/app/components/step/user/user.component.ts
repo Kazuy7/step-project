@@ -18,7 +18,7 @@ export class UserComponent {
       id: new FormControl(''),
       email: new FormControl('', [Validators.required]),
       senha: new FormControl('', [Validators.required]),
-      tipo: new FormControl(''),
+      tipo: new FormControl('', [Validators.required]),
       status: new FormControl(''),
       created_at: new FormControl(''),
       updated_at: new FormControl(''),
@@ -31,6 +31,10 @@ export class UserComponent {
 
   get senha() {
     return this.userForm.get('senha')!;
+  }
+
+  get tipo() {
+    return this.userForm.get('tipo')!;
   }
 
   submit() {

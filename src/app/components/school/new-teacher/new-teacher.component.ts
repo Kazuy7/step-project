@@ -25,10 +25,11 @@ export class NewTeacherComponent {
     const formData = new FormData()
     const id = Number(this.route.snapshot.paramMap.get('id'));
 
+    formData.append("nome", teacher.nome)
     formData.append("email", teacher.email)
     formData.append("senha", teacher.senha)
     formData.append("tipo", String('professor'))
-    formData.append("status", teacher.status)
+    formData.append("status", String('ativo'))
     formData.append("schools_id", String(id))
 
 

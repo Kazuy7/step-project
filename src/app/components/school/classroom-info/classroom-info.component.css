@@ -8,17 +8,23 @@
         margin: 50px 0;
         padding: 10px;
     }
-    
+
     .classroom {
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     .iden {
         width: 50%;
         border-left: 2px solid black;
+    }
+
+    .dropend button {
+        width: 20%;
+        text-align: end;
+        color: white;
     }
 }
 
@@ -27,16 +33,24 @@
         padding: 20px 0;
         margin: 0 5px;
     }
+
+    .classroom { 
+        margin-bottom: 50px;
+    }
+
+    .dropend button {
+        width: 50%;
+        text-align: end;
+        color: white;
+    }
+}
+
+.btns-container {
+    margin: 0 10px;
 }
 
 span {
     color: #e30613;
-}
-
-.dropend button {
-    width: 20%;
-    text-align: end;
-    color: white;
 }
 
 .dropend img {

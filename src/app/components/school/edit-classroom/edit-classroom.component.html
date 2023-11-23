@@ -1,5 +1,9 @@
+<div class="back-page">
+    <a routerLink="/school/{{ school?.id }}/classroom/{{ classroom?.id }}"><img src="assets/back-black.png">Voltar</a>
+</div>
+
 <div *ngIf="classroom">
-    <h1 class="pt-5"><span>{{ classroom.turma }}</span></h1>
-    <h1>EDITAR INFORMAÇÕES</h1>
+    <h1><span>{{ classroom.turma }}</span></h1>
+    <h1 class="pb-5">EDITAR INFORMAÇÕES</h1>
     <app-classroom (onSubmit)="editHandler($event)" [classroomData]="classroom" [btnText]="btnText"></app-classroom>
 </div>

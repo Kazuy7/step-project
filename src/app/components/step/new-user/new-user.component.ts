@@ -26,7 +26,7 @@ export class NewUserComponent {
     formData.append("email", user.email);
     formData.append("senha", user.senha);
     formData.append("tipo", user.tipo);
-    formData.append("status", user.status);
+    formData.append("status", String('ativo'));
 
     // to do
 

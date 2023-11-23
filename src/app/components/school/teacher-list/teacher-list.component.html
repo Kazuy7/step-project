@@ -1,9 +1,13 @@
+<div class="back-page">
+    <a routerLink="/school/{{ school?.id }}"><img src="assets/back-black.png">Voltar</a>
+</div>
+
 <div class="list-container">
 
     <div *ngIf="teachers.length > 0;else noTeachers" class="teachers-container">
         <div class="teacher" *ngFor="let teacher of teachers">
             <div *ngIf="teacher.schools_id == school?.id">
-                <h1 class="m-0">{{ teacher.email }}</h1>
+                <h1 class="m-0">{{ teacher.nome }}</h1>
             </div>
         </div>
     </div>

@@ -132,3 +132,19 @@ input[type="submit"]:hover {
 background-color: black;
 }
 /* BTNs */
+
+.back-page img {
+    /* background-color: #f8b037; */
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 50px;
+}
+
+.back-page a {
+    padding: 5px 10px;
+}
+
+.back-page a:hover {
+    background-color: #f8b037;
+    padding: 5px 12px 5px 0;
+}

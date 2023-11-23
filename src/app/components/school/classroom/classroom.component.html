@@ -1,25 +1,28 @@
-<h1 class="pt-5">CADASTRO DE TURMA</h1>
+<!-- <div class="back-page">
+    <a routerLink="/school/{{ school?.id }}"><img src="assets/back-black.png">Voltar</a>
+</div>
+
+<h1 class="pt-5">CADASTRAR DE TURMA</h1> -->
 
 <form (ngSubmit)="submit()" [formGroup]="classroomForm" #formDir="ngForm" class="pb-5">
-
-    <!-- --------------------------------------------------------------- -->
 
     <div class="form-group" *ngIf="teachers.length > 0; else noTeachers">
         <label for="professor">Professor responsável:</label>
         <select formControlName="professor">
             <option selected value="">Selecione um professor</option>
-            <option *ngFor="let teacher of teachers" value="{{ teacher.email }}">
-                <div *ngIf="teacher.schools_id == school?.id">{{ teacher.email }}</div>
+            <option *ngFor="let teacher of teachers" value="{{ teacher.nome }}">
+                <div *ngIf="teacher.schools_id == school?.id">{{ teacher.nome }}</div>
             </option>
         </select>
     </div>
     <ng-template #noTeachers class="classrooms-container-mob">
-        <select>
-            <option selected>Não há professores cadastrados!</option>
-        </select>
+        <div class="form-group">
+            <label for="professor">Professor responsável:</label>
+            <select>
+                <option selected value="null">Não há professores cadastrados!</option>
+            </select>
+        </div>
     </ng-template>
-
-    <!-- --------------------------------------------------------------- -->
 
     <div class="form-group">
         <label for="numeroalunos">Número de alunos:</label>
@@ -32,13 +35,15 @@
     <div class="form-group">
         <label for="ano">Nível escolar:</label>
         <select formControlName="ano" required>
-            <option selected>Infantil</option>
+            <option selected value="">Selecione o nível</option>
+            <option>Maternal</option>
+            <option>Pré</option>
             <option>Fundamental 1</option>
             <option>Fundamental 2</option>
             <option>Ensino Médio</option>
         </select>
         <div *ngIf="ano.invalid && formDir.submitted" class="validation-error">
-            <p *ngIf="ano.errors?.['required']">O ano é obrigatório</p>
+            <p *ngIf="ano.errors?.['required']">O nível escolar é obrigatório</p>
         </div>
     </div>
 
@@ -46,14 +51,15 @@
         <label for="turma">Turma:</label>
         <input type="text" placeholder="Turma" formControlName="turma" required>
         <div *ngIf="turma.invalid && formDir.submitted" class="validation-error">
-            <p *ngIf="turma.errors?.['required']">O número de alunos é obrigatório</p>
+            <p *ngIf="turma.errors?.['required']">A turma é obrigatória</p>
         </div>
     </div>
 
     <div class="form-group">
         <label for="periodo">Período da aula:</label>
         <select formControlName="periodo" required>
-            <option selected>Manhã</option>
+            <option selected value="">Selecione o período</option>
+            <option>Manhã</option>
             <option>Tarde</option>
         </select>
         <div *ngIf="periodo.invalid && formDir.submitted" class="validation-error">
@@ -64,7 +70,8 @@
     <div class="form-group">
         <label for="dia">Dia da aula:</label>
         <select formControlName="dia" required>
-            <option selected>Segunda-feira</option>
+            <option selected value="">Selecione o dia</option>
+            <option>Segunda-feira</option>
             <option>Terça-feira</option>
             <option>Quarta-feira</option>
             <option>Quinta-feira</option>

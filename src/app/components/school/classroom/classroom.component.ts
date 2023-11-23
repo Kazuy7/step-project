@@ -51,10 +51,10 @@ export class ClassroomComponent {
     // Filtrando o array das classrooms (não está funcionando no console network)
     this.teacherService.getTeachers().subscribe((items) => {
       this.teachers = items.data.filter((teacher) => teacher.schools_id == this.school?.id);
+      console.log('Teachers',this.teachers)
+      console.log('Schools',this.school)
     });
 
-    console.log(this.teachers)
-    console.log(this.school)
   }
 
 
