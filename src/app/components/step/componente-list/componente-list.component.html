@@ -1,0 +1,29 @@
+<h1 class="pt-5">Lista de componentes</h1>
+
+<div class="list-container">
+
+    <div class="search-container">
+        <form>
+            <fa-icon [icon]="faSearch"></fa-icon>
+            <input type="text" placeholder="Pesquisar" (input)="search($event)">
+        </form>
+    </div>
+
+    <div *ngIf="componentes.length > 0; else noComponentes" class="componentes-container">
+        <div class="componente" *ngFor="let componente of componentes">
+            <div class="description">
+                <h1 class="m-0">{{ componente.nome }}</h1>
+                <p><b>R$ </b>{{ componente.valor }}</p>
+                <p><b>Descrição: </b>{{ componente.descricao }}</p>
+            </div>
+            <div class="edit-btn">
+                <a routerLink="/componente/edit/{{ componente.id }}"><img src="assets/edit.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #noComponentes>
+        <h1>Não há escolas cadastradas!</h1>
+    </ng-template>
+
+</div>

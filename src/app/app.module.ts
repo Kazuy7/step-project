@@ -29,6 +29,12 @@ import { EditSchoolComponent } from './components/school/edit-school/edit-school
 import { TeacherInfoComponent } from './components/school/teacher-info/teacher-info.component';
 import { TeacherListComponent } from './components/school/teacher-list/teacher-list.component';
 import { EditClassroomComponent } from './components/school/edit-classroom/edit-classroom.component';
+import { KitComponent } from './components/step/kit/kit.component';
+import { NewKitComponent } from './components/step/new-kit/new-kit.component';
+import { ComponenteComponent } from './components/step/componente/componente.component';
+import { NewComponenteComponent } from './components/step/new-componente/new-componente.component';
+import { ComponenteListComponent } from './components/step/componente-list/componente-list.component';
+import { EditComponenteComponent } from './components/step/edit-componente/edit-componente.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +61,12 @@ import { EditClassroomComponent } from './components/school/edit-classroom/edit-
     TeacherInfoComponent,
     TeacherListComponent,
     EditClassroomComponent,
+    KitComponent,
+    NewKitComponent,
+    ComponenteComponent,
+    NewComponenteComponent,
+    ComponenteListComponent,
+    EditComponenteComponent,
   ],
   imports: [
     BrowserModule,

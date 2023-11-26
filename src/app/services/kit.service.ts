@@ -1,37 +1,37 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Classroom } from '../interfaces/Classroom';
+import { Kit } from '../interfaces/Kit';
 import { environment } from 'src/environments/environment';
 import { Response } from '../interfaces/Response';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ClassroomService {
+export class KitService {
   private baseApiUrl = environment.baseApiUrl
-  private apiUrl = `${this.baseApiUrl}api/classroom`
+  private apiUrl = `${this.baseApiUrl}api/kit`
 
   constructor(private http: HttpClient) { }
 
   // Define que vamos receber uma resposta que contém um array de registros
-  getClassrooms(): Observable<Response<Classroom[]>> {
-    return this.http.get<Response<Classroom[]>>(this.apiUrl);
+  getKits(): Observable<Response<Kit[]>> {
+    return this.http.get<Response<Kit[]>>(this.apiUrl);
   }
 
-  // Puxando uma Classroom individual
-  getClassroom(id: number): Observable<Response<Classroom>> {
+  // Puxando uma Kit individual
+  getKit(id: number): Observable<Response<Kit>> {
     const url = `${this.apiUrl}/${id}`;
-    return this.http.get<Response<Classroom>>(url);
+    return this.http.get<Response<Kit>>(url);
   }
 
   // Criação do método que recebe dados do formulário(formData) e usa o verbo POST para inserir dados no banco através da API
-  createClassroom(formData: FormData): Observable<FormData> {
+  createKit(formData: FormData): Observable<FormData> {
     return this.http.post<FormData>(this.apiUrl, formData);
   }
 
   // Chamando o método de edição de dados
-  updateClassroom(id: number, formData: FormData): Observable<FormData> {
+  updateKit(id: number, formData: FormData): Observable<FormData> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.put<FormData>(url, formData);
   }

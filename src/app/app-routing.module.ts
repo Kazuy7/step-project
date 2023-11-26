@@ -15,6 +15,9 @@ import { EditSchoolComponent } from './components/school/edit-school/edit-school
 import { TeacherInfoComponent } from './components/school/teacher-info/teacher-info.component';
 import { TeacherListComponent } from './components/school/teacher-list/teacher-list.component';
 import { EditClassroomComponent } from './components/school/edit-classroom/edit-classroom.component';
+import { NewComponenteComponent } from './components/step/new-componente/new-componente.component';
+import { ComponenteListComponent } from './components/step/componente-list/componente-list.component';
+import { EditComponenteComponent } from './components/step/edit-componente/edit-componente.component';
 
 const routes: Routes = [
       { path: '', component: HomeStepComponent },
@@ -33,6 +36,9 @@ const routes: Routes = [
       { path: 'school/:id/teacher/new', component: NewTeacherComponent },
       { path: 'school/:id/teacher/list', component: TeacherListComponent },
       { path: 'school/:id/teacher/:id', component: TeacherInfoComponent },
+      { path: 'componente/new', component: NewComponenteComponent },
+      { path: 'componente/list', component: ComponenteListComponent },
+      { path: 'componente/edit/:id', component: EditComponenteComponent },
     ];
 
 @NgModule({
