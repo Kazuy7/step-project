@@ -9,7 +9,6 @@ import { HomeStepComponent } from './components/home-step/home-step.component';
 import { NewClassroomComponent } from './components/school/new-classroom/new-classroom.component';
 import { ClassroomInfoComponent } from './components/school/classroom-info/classroom-info.component';
 import { ClassroomListComponent } from './components/school/classroom-list/classroom-list.component';
-import { HomeSchoolComponent } from './components/home-school/home-school.component';
 import { NewTeacherComponent } from './components/school/new-teacher/new-teacher.component';
 import { EditSchoolComponent } from './components/school/edit-school/edit-school.component';
 import { TeacherInfoComponent } from './components/school/teacher-info/teacher-info.component';
@@ -18,14 +17,16 @@ import { EditClassroomComponent } from './components/school/edit-classroom/edit-
 import { NewComponenteComponent } from './components/step/new-componente/new-componente.component';
 import { ComponenteListComponent } from './components/step/componente-list/componente-list.component';
 import { EditComponenteComponent } from './components/step/edit-componente/edit-componente.component';
+import { NewKitComponent } from './components/step/new-kit/new-kit.component';
+import { KitListComponent } from './components/step/kit-list/kit-list.component';
+import { NewCompkitComponent } from './components/step/new-compkit/new-compkit.component';
 
 const routes: Routes = [
       { path: '', component: HomeStepComponent },
-      { path: 'home-school', component: HomeSchoolComponent },
       { path: 'login', component: LoginComponent },
       { path: 'user/new', component: NewUserComponent },
-      { path: 'school/new', component: NewSchoolComponent },
       { path: 'classroom/new', component: NewClassroomComponent },
+      { path: 'school/new', component: NewSchoolComponent },
       { path: 'school/list', component: SchoolListComponent},
       { path: 'school/edit/:id', component: EditSchoolComponent},
       { path: 'school/:id', component: SchoolInfoComponent},
@@ -39,6 +40,9 @@ const routes: Routes = [
       { path: 'componente/new', component: NewComponenteComponent },
       { path: 'componente/list', component: ComponenteListComponent },
       { path: 'componente/edit/:id', component: EditComponenteComponent },
+      { path: 'kit/new', component: NewKitComponent },
+      { path: 'kit/list', component: KitListComponent },
+      { path: 'compkit/new', component: NewCompkitComponent },
     ];
 
 @NgModule({

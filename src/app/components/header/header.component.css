@@ -3,13 +3,18 @@ header {
 }
 
 .step-logo a {
-    /* border-bottom: 1px solid black; */
     display: flex;
-    justify-content: center;
 }
 
-.step-logo img {
-    padding: 30px 0;
-    width: 40%;
+@media(min-width: 576px) {
+    .step-logo img {
+        margin: 30px;
+        width: 200px;
+    }
 }
-
+@media(max-width: 575px) {
+    .step-logo img {
+        margin: 30px;
+        width: 130px;
+    }
+}

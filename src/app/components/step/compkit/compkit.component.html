@@ -1,0 +1,43 @@
+<app-new-kit></app-new-kit>
+
+<h1 class="pt-5">CADASTRAR KIT</h1>
+
+<form (ngSubmit)="submit()" [formGroup]="compkitForm" #formDir="ngForm" class="user-form">
+
+    <div class="form-container">
+        <div class="form-group">
+            <label for="quantidade">Quantidade:</label>
+            <input type="text" placeholder="Informe a quantidade desse componente" formControlName="quantidade" required>
+            <div *ngIf="quantidade.invalid && formDir.submitted" class="validation-error">
+                <p *ngIf="quantidade.errors?.['required']">A quantidade é obrigatória!</p>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------ -->
+
+        <div class="form-group" *ngIf="componentes.length > 0; else noComponentes">
+            <label for="nome">Componente:</label>
+            <select>
+                <option selected value="">Selecione um nome</option>
+                <option *ngFor="let componente of componentes" value="{{ componente.nome }}">
+                    <div>{{ componente.nome }}</div>
+                </option>
+            </select>
+        </div>
+        <ng-template #noComponentes class="classrooms-container-mob">
+            <div class="form-group">
+                <label for="nome">Componente:</label>
+                <select>
+                    <option selected value="null">Não há componentes cadastrados!</option>
+                </select>
+            </div>
+        </ng-template>
+
+        <!-- ------------------------------------------------ -->
+
+        <div class="btn-register">
+            <input type="submit" value="{{ btnText }}">
+        </div>
+    </div>
+
+</form>

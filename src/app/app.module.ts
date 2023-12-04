@@ -18,7 +18,6 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { SchoolComponent } from './components/school/school/school.component';
 import { NewSchoolComponent } from './components/school/new-school/new-school.component';
 import { HomeStepComponent } from './components/home-step/home-step.component';
-import { HomeSchoolComponent } from './components/home-school/home-school.component';
 import { ClassroomComponent } from './components/school/classroom/classroom.component';
 import { NewClassroomComponent } from './components/school/new-classroom/new-classroom.component';
 import { ClassroomInfoComponent } from './components/school/classroom-info/classroom-info.component';
@@ -35,6 +34,9 @@ import { ComponenteComponent } from './components/step/componente/componente.com
 import { NewComponenteComponent } from './components/step/new-componente/new-componente.component';
 import { ComponenteListComponent } from './components/step/componente-list/componente-list.component';
 import { EditComponenteComponent } from './components/step/edit-componente/edit-componente.component';
+import { KitListComponent } from './components/step/kit-list/kit-list.component';
+import { NewCompkitComponent } from './components/step/new-compkit/new-compkit.component';
+import { CompkitComponent } from './components/step/compkit/compkit.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,6 @@ import { EditComponenteComponent } from './components/step/edit-componente/edit-
     SchoolComponent,
     NewSchoolComponent,
     HomeStepComponent,
-    HomeSchoolComponent,
     ClassroomComponent,
     NewClassroomComponent,
     ClassroomInfoComponent,
@@ -67,6 +68,9 @@ import { EditComponenteComponent } from './components/step/edit-componente/edit-
     NewComponenteComponent,
     ComponenteListComponent,
     EditComponenteComponent,
+    KitListComponent,
+    NewCompkitComponent,
+    CompkitComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,75 @@
-<p>kit works!</p>
+<h1 class="pt-5">CADASTRAR KIT</h1>
+
+<form (ngSubmit)="submit()" [formGroup]="kitForm" #formDir="ngForm" class="user-form">
+
+    <div class="form-container">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" placeholder="Digite o nome do kit" formControlName="nome" required>
+            <div *ngIf="nome.invalid && formDir.submitted" class="validation-error">
+                <p *ngIf="nome.errors?.['required']">O nome é obrigatório!</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="qtdalunos">Para quantos alunos:</label>
+            <input type="text" placeholder="Defina a quantidade de alunos" formControlName="qtdalunos" required>
+            <div *ngIf="qtdalunos.invalid && formDir.submitted" class="validation-error">
+                <p *ngIf="qtdalunos.errors?.['required']">A quantidade de alunos é obrigatória!</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="descricao">Descrição do kit:</label>
+            <input type="text" placeholder="Descreva o kit" formControlName="descricao" required>
+            <div *ngIf="descricao.invalid && formDir.submitted" class="validation-error">
+                <p *ngIf="descricao.errors?.['required']">A descrição é obrigatória!</p>
+            </div>
+        </div>
+
+        <div class="form-group" *ngIf="componentes.length > 0; else noComponentes">
+            <label for="id">Componente:</label>
+            <select formControlName="componente_id">
+                <option selected value="">Selecione um nome</option>
+                <option *ngFor="let componente of componentes" value="{{ componente.id }}">
+                    {{ componente.nome }} {{ componente.descricao }}
+                </option>
+            </select>
+        </div>
+        <ng-template #noComponentes class="classrooms-container-mob">
+            <div class="form-group">
+                <label for="nome">Componente:</label>
+                <select>
+                    <option selected value="null">Não há componentes cadastrados!</option>
+                </select>
+            </div>
+        </ng-template>
+
+        <div class="form-group">
+            <label for="quantidade">Quantidade:</label>
+            <input type="text" id="quantidade" placeholder="Informe a quantidade desse componente" formControlName="quantidade">
+            <!-- <div *ngIf="quantidade.invalid && formDir.submitted" class="validation-error">
+                <p *ngIf="quantidade.errors?.['required']">A quantidade é obrigatória!</p>
+            </div> -->
+        </div>
+
+        <div class="btn-add">
+            <button type="button" (click)="adicionarComponente()">Adicionar</button>
+        </div>
+        
+        <!-- Exibir componentes selecionados -->
+        <div *ngIf="componentesSelecionados.length > 0">
+            <h2>Componentes Selecionados:</h2>
+            <ul>
+                <li *ngFor="let componenteSelecionado of componentesSelecionados">
+                    Componente: {{ componenteSelecionado.nome }} - Quantidade: {{ componenteSelecionado.quantidade }}
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn-register">
+            <input type="submit" value="{{ btnText }}">
+        </div>
+    </div>
+
+</form>

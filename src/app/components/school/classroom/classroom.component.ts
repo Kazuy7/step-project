@@ -43,7 +43,6 @@ export class ClassroomComponent {
       turma: new FormControl(this.classroomData ? this.classroomData.turma : '', [Validators.required]),
       periodo: new FormControl(this.classroomData ? this.classroomData.periodo : '', [Validators.required]),
       dia: new FormControl(this.classroomData ? this.classroomData.dia : '', [Validators.required]),
-      schools_id: new FormControl(this.classroomData ? this.classroomData.schools_id : ''), // desnecessário
       created_at: new FormControl(this.classroomData ? this.classroomData.created_at : ''),
       updated_at: new FormControl(this.classroomData ? this.classroomData.updated_at : ''),
     });
