@@ -1,0 +1,85 @@
+@media(min-width: 768px) {
+    .component-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .component-list {
+        width: 54%;
+        margin-bottom: 0;
+    }
+
+    .nocomponents-container {
+        width: 54%;
+        margin-bottom: 0;
+    }
+
+    .qtd-container {
+        width: 34%;
+        margin-bottom: 0;
+    }
+
+    .btn-add {
+        width: 8%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .btn-add-mob {
+        display: none;
+    }
+
+    .qtd-mob {
+        display: none;
+    }
+}
+
+@media(max-width: 767px) {
+    .form-container {
+        margin: 0 10px;
+    }
+
+    .component-list {
+        margin-bottom: 0;
+    }
+
+    .view-mob {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .qtd-container {
+        display: none;
+    }
+
+    .btn-add {
+        display: none;
+    }
+
+    .qtd-mob {
+        width: 70%;
+    }
+    
+    .btn-add-mob {
+        width: 30%;
+        display: flex;
+        justify-content: end;
+    }
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+img {
+    width: 50px;
+}
+
+.selected-container {
+    background-color: rgb(235, 235, 235);
+    margin: 30px 0 0;
+    padding: 0 10px;
+    border-radius: 10px;
+}

@@ -2,12 +2,12 @@
 
 <div class="list-container">
 
-    <!-- <div class="search-container">
+    <div class="search-container">
         <form>
             <fa-icon [icon]="faSearch"></fa-icon>
             <input type="text" placeholder="Pesquisar" (input)="search($event)">
         </form>
-    </div> -->
+    </div>
 
     <div *ngIf="schools.length > 0; else noSchools" class="schools-container">
         <div class="school" *ngFor="let school of schools">

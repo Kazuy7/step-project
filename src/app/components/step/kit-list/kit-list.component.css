@@ -1,0 +1,85 @@
+@media(min-width: 767px) {
+    .kit h1 {
+        font-size: 30px;
+    }
+
+    .kit {
+        width: 48%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid  rgba(128, 128, 128, 0.300);
+        margin-bottom: 4%;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .kit a:hover {
+        color: #e30613;
+    }
+}
+
+@media(max-width: 768px) {
+    .kit h1 {
+        font-size: 24px;
+    }
+
+    .kit {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid  rgba(128, 128, 128, 0.300);
+        margin-bottom: 4%;
+        border-radius: 10px;
+        background-color: white;
+    }
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.300);
+    border-radius: 10px;
+    background-color: rgb(235, 235, 235);
+}
+
+.search-container {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container form{
+    width: 60%;
+    position: relative;
+}
+
+.search-container fa-icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.search-container input {
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.kits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 92%;
+    margin: 0 4%;
+}
+

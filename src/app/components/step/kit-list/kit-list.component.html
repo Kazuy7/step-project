@@ -1,1 +1,22 @@
-<p>kit-list works!</p>
+<h1 class="pt-5">Lista de Kits</h1>
+
+<div class="list-container">
+
+    <div class="search-container">
+        <form>
+            <fa-icon [icon]="faSearch"></fa-icon>
+            <input type="text" placeholder="Pesquisar" (input)="search($event)">
+        </form>
+    </div>
+
+    <div *ngIf="kits.length > 0; else noKits" class="kits-container">
+        <div class="kit" *ngFor="let kit of kits">
+            <h1 class="m-0"><a routerLink="/kit/{{ kit.id }}">{{ kit.nome }}</a></h1>
+        </div>
+    </div>
+
+    <ng-template #noKits>
+        <h1>Não há escolas cadastradas!</h1>
+    </ng-template>
+
+</div>

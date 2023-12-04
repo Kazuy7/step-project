@@ -27,42 +27,61 @@
             </div>
         </div>
 
-        <div class="form-group" *ngIf="componentes.length > 0; else noComponentes">
-            <label for="id">Componente:</label>
-            <select formControlName="componente_id">
-                <option selected value="">Selecione um nome</option>
-                <option *ngFor="let componente of componentes" value="{{ componente.id }}">
-                    {{ componente.nome }} {{ componente.descricao }}
-                </option>
-            </select>
-        </div>
-        <ng-template #noComponentes class="classrooms-container-mob">
-            <div class="form-group">
-                <label for="nome">Componente:</label>
-                <select>
-                    <option selected value="null">Não há componentes cadastrados!</option>
+        <!-- COMPONENTE -->
+        <h3 class="text-center">Adicione os componentes</h3>
+        <div class="component-container">
+            <div class="form-group component-list" *ngIf="componentes.length > 0; else noComponentes">
+                <label for="id">Componente:</label>
+                <select formControlName="componente_id">
+                    <option selected value="">Selecione um nome</option>
+                    <option *ngFor="let componente of componentes" value="{{ componente.id }}">
+                        {{ componente.nome }} {{ componente.descricao }}
+                    </option>
                 </select>
             </div>
-        </ng-template>
+            <ng-template #noComponentes class="nocomponents-container">
+                <div class="form-group">
+                    <label for="nome">Componente:</label>
+                    <select>
+                        <option selected value="null">Não há componentes cadastrados!</option>
+                    </select>
+                </div>
+            </ng-template>
 
-        <div class="form-group">
-            <label for="quantidade">Quantidade:</label>
-            <input type="text" id="quantidade" placeholder="Informe a quantidade desse componente" formControlName="quantidade">
-            <!-- <div *ngIf="quantidade.invalid && formDir.submitted" class="validation-error">
+            <div class="form-group qtd-container">
+                <label for="quantidade">Quantidade:</label>
+                <input type="text" id="quantidade" placeholder="Informe a quantidade" formControlName="quantidade">
+                <!-- <div *ngIf="quantidade.invalid && formDir.submitted" class="validation-error">
                 <p *ngIf="quantidade.errors?.['required']">A quantidade é obrigatória!</p>
             </div> -->
-        </div>
+            </div>
 
-        <div class="btn-add">
-            <button type="button" (click)="adicionarComponente()">Adicionar</button>
+            <div class="btn-add">
+                <button type="button" (click)="adicionarComponente()"><img src="assets/btn-add.png"></button>
+            </div>
         </div>
-        
+        <!-- COMPONENTE -->
+
+
+        <!-- VIEW MOB -->
+        <div class="view-mob">
+            <div class="form-group qtd-mob">
+                <label for="quantidade">Quantidade:</label>
+                <input type="text" id="quantidade" placeholder="Informe a quantidade" formControlName="quantidade">
+            </div>
+            <div class="btn-add-mob">
+                <button type="button" (click)="adicionarComponente()"><img src="assets/btn-add.png"></button>
+            </div>
+        </div>
+        <!-- VIEW MOB -->
+
         <!-- Exibir componentes selecionados -->
-        <div *ngIf="componentesSelecionados.length > 0">
-            <h2>Componentes Selecionados:</h2>
+        <div *ngIf="componentesSelecionados.length > 0" class="selected-container">
+            <h4>Componentes selecionados:</h4>
             <ul>
                 <li *ngFor="let componenteSelecionado of componentesSelecionados">
-                    Componente: {{ componenteSelecionado.nome }} - Quantidade: {{ componenteSelecionado.quantidade }}
+                    Componente: {{ componenteSelecionado.nome }} / Quantidade: {{ componenteSelecionado.quantidade
+                    }}
                 </li>
             </ul>
         </div>
