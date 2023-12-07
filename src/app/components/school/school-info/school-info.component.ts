@@ -31,7 +31,5 @@ export class SchoolInfoComponent {
     this.classroomService.getClassrooms().subscribe((items) => {
       this.classrooms = items.data.filter((classroom) => classroom.schools_id == this.school?.id);
     });
-
-    console.log('Array Schools:', this.school)
   }
 }

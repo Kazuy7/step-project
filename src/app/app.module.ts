@@ -37,6 +37,7 @@ import { EditComponenteComponent } from './components/step/edit-componente/edit-
 import { KitListComponent } from './components/step/kit-list/kit-list.component';
 import { NewCompkitComponent } from './components/step/new-compkit/new-compkit.component';
 import { CompkitComponent } from './components/step/compkit/compkit.component';
+import { KitInfoComponent } from './components/step/kit-info/kit-info.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { CompkitComponent } from './components/step/compkit/compkit.component';
     KitListComponent,
     NewCompkitComponent,
     CompkitComponent,
+    KitInfoComponent,
   ],
   imports: [
     BrowserModule,

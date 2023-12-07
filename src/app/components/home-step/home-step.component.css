@@ -95,3 +95,11 @@ img {
 .link:hover {
     color: grey;
 }
+
+.dashboard-desktop iframe {
+    border: 2px solid rgb(235, 235, 235);
+    border-radius: 10px;
+    width: 100%;
+    margin: 50px 0;
+    padding-top: 20px;
+}
