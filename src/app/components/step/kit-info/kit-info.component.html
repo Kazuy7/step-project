@@ -1,0 +1,22 @@
+<div class="kit-container" *ngIf="kit">
+    <h1>Kit <span>{{ kit.nome }}</span></h1>
+    <h4>Ideal que seja feito por até {{ kit.qtdalunos }} alunos.</h4>
+
+    <div class="component-container">
+        <div *ngFor="let compkit of compkits" class="component-card">
+            <div *ngIf="compkit.kits_id == kit?.id">
+                <div *ngFor="let componente of componentes">
+                    <div *ngIf="componente.id == compkit?.componentes_id">
+                        <p>{{ componente.nome }} {{ componente.descricao }}</p>
+                        <p>Quantidade: {{ compkit.quantidade }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="description">
+        <h3><b>Descrição</b></h3>
+        <p>{{ kit.descricao }}</p>
+    </div>
+</div>

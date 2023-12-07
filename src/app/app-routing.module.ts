@@ -20,6 +20,7 @@ import { EditComponenteComponent } from './components/step/edit-componente/edit-
 import { NewKitComponent } from './components/step/new-kit/new-kit.component';
 import { KitListComponent } from './components/step/kit-list/kit-list.component';
 import { NewCompkitComponent } from './components/step/new-compkit/new-compkit.component';
+import { KitInfoComponent } from './components/step/kit-info/kit-info.component';
 
 const routes: Routes = [
       { path: '', component: HomeStepComponent },
@@ -42,6 +43,7 @@ const routes: Routes = [
       { path: 'componente/edit/:id', component: EditComponenteComponent },
       { path: 'kit/new', component: NewKitComponent },
       { path: 'kit/list', component: KitListComponent },
+      { path: 'kit/:id', component: KitInfoComponent },
       { path: 'compkit/new', component: NewCompkitComponent },
     ];
 
